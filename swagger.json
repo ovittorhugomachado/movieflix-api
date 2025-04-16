@@ -1,0 +1,82 @@
+{
+    "openapi": "3.0.4",
+    "info": {
+        "title": "MovieFlix API",
+        "description": "API responsável por gerenciar os filmes do MovieFlix",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/movies": {
+            "get": {
+                "tags": ["Movie"],
+                "summary": "obter todos os filmes",
+                "responses": {
+                    "200": {
+                        "description": "retorna uma lista de filmes",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Movie"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Movie": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "ID do filme"
+                    },
+                    "movie_name": {
+                        "type": "string",
+                        "description": "Nome do filme"
+                    },
+                    "movie_language": {
+                        "type": "integer",
+                        "description": "Idioma do filme"
+                    },
+                    "languages": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer",
+                                "description": "ID do idioma"
+                            },
+                            "language_name": {
+                                "type": "string",
+                                "description": "Nome do idioma"
+                            }
+                        }
+                    },
+                    "genre_movie": {
+                        "type": "integer",
+                        "description": "Gênero do filme"
+                    },
+                    "genres": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer",
+                                "description": "ID do gênero"
+                            },
+                            "genre_name": {
+                                "type": "string",
+                                "description": "Nome do gênero"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
