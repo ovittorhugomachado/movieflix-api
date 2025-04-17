@@ -8,7 +8,7 @@ const app = express();
 const prisma = new PrismaClient();
 
 app.use(express.json());
-app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 app.get("/movies", async (_, res) => {
 
@@ -52,26 +52,37 @@ app.post("/movies", async (req, res) => {
 })
 
 app.put("/movies/:id", async (req, res) => {
-
+    const { id } = req.params;
+    
     try {
+        // Verifica se o filme existe
         const movie = await prisma.movie.findUnique({
-            where: { id },
+            where: { id: Number(id) },
         });
 
         if (!movie) {
-            return res.status(404).send({ message: "Filme não encontrado" });
+            return res.status(404).json({ message: "Filme não encontrado" });
         }
 
-        const data = { ...req.body };
-        data.release_date = data.release_date
-            ? new Date(data.release_date)
-            : undefined;
+        // Extrai os dados do corpo da requisição
+        const data = req.body;
 
-        await prisma.movie.update({ where: { id }, data });
+        // Atualiza o filme
+        const updatedMovie = await prisma.movie.update({
+            where: { id: Number(id) },
+            data,
+        });
+
+        // Retorna o filme atualizado
+        return res.status(200).json(updatedMovie);
+
     } catch (error) {
-        return res.status(500).send({ message: "Falha ao atualizar o registro" });
+        console.error(error); // Log do erro para debug
+        return res.status(500).json({ 
+            message: "Falha ao atualizar o registro",
+            error: error.message // Adiciona a mensagem de erro (opcional)
+        });
     }
-
 });
 
 app.delete("/movies/:id", async (req, res) => {
