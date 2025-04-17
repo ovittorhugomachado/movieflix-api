@@ -1,0 +1,32 @@
+{
+  "overrides": [
+    {
+      "files": ["**/*.{js,mjs,cjs,ts}"],
+      "plugins": {
+        "js": "eslint-plugin-js",
+        "@typescript-eslint": "@typescript-eslint/eslint-plugin"
+      },
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+      },
+      "globals": {
+        "node": true,
+        "es2021": true
+      },
+      "rules": {
+        "@typescript-eslint/require-await": "off",
+        "@typescript-eslint/no-misused-promises": "error",
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/no-floating-promises": "error",
+        "js/no-unused-vars": "warn",
+        "js/eqeqeq": "error",
+        "js/no-console": "warn",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-explicit-any": "warn"
+      }
+    }
+  ]
+}

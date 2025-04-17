@@ -1,4 +1,5 @@
-import express from "express"
+
+import express from "express";
 import { PrismaClient } from './generated/prisma/client'
 import swaggerUi from "swagger-ui-express"
 import swaggerDocument from "../swagger.json"
@@ -34,7 +35,7 @@ app.post("/movies", async (req, res) => {
         });
 
         if (moviesWithSameName) {
-            return res.status(409).send({ message: "Jáexiste um filme cadastrado com esse título" });
+            return res.status(409).send({ message: "Já existe um filme cadastrado com esse título" });
         };
 
         await prisma.movie.create({
@@ -44,18 +45,20 @@ app.post("/movies", async (req, res) => {
                 genre_movie
             }
         });
-    } catch (error) {
-        return res.status(500).send({ message: "ocorreu um erro ao cadastrar filme" });
-    }
 
-    res.status(201).send()
-})
+        res.status(201).send()
+    } catch (error: unknown) {
+        res.status(500).json({
+            message: "Não foi possível cadastrar o filme",
+            error: error instanceof Error ? error.message : "Erro desconhecido"
+        });
+    }
+});
 
 app.put("/movies/:id", async (req, res) => {
     const { id } = req.params;
-    
+
     try {
-        // Verifica se o filme existe
         const movie = await prisma.movie.findUnique({
             where: { id: Number(id) },
         });
@@ -64,23 +67,19 @@ app.put("/movies/:id", async (req, res) => {
             return res.status(404).json({ message: "Filme não encontrado" });
         }
 
-        // Extrai os dados do corpo da requisição
         const data = req.body;
 
-        // Atualiza o filme
         const updatedMovie = await prisma.movie.update({
             where: { id: Number(id) },
             data,
         });
 
-        // Retorna o filme atualizado
-        return res.status(200).json(updatedMovie);
+        res.status(200).json(updatedMovie);
 
-    } catch (error) {
-        console.error(error); // Log do erro para debug
-        return res.status(500).json({ 
+    } catch (error: unknown) {
+        res.status(500).json({
             message: "Falha ao atualizar o registro",
-            error: error.message // Adiciona a mensagem de erro (opcional)
+            error: error instanceof Error ? error.message : "Erro desconhecido"
         });
     }
 });
@@ -97,11 +96,16 @@ app.delete("/movies/:id", async (req, res) => {
         }
 
         await prisma.movie.delete({ where: { id } });
-    } catch (error) {
-        return res.status(500).send({ message: "Não foi possível deletar o filme" })
-    }
 
-    res.status(200).send()
+        res.status(200).send()
+
+    } catch (error: unknown) {
+        console.error(error);
+        res.status(500).json({
+            message: "Não foi possível deletar o filme",
+            error: error instanceof Error ? error.message : "Erro desconhecido"
+        });
+    }
 })
 
 app.get("/movies/:genreName", async (req, res) => {
@@ -122,12 +126,16 @@ app.get("/movies/:genreName", async (req, res) => {
             }
 
         })
-        
+
         res.status(200).send(moviesFilteredByGenreName)
-    }catch(error){
-        res.status(500).send({ message: "erro ao filtrar filmes por gênero"})
+
+    } catch (error: unknown) {
+        res.status(500).json({
+            message: "Erro ao filtrar filme por gênero",
+            error: error instanceof Error ? error.message : "Erro desconhecido"
+        });
     }
-    
+
 })
 
 app.listen(port, () => {
