@@ -14,20 +14,20 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Genre
+ * Model genres
  * 
  */
-export type Genre = $Result.DefaultSelection<Prisma.$GenrePayload>
+export type genres = $Result.DefaultSelection<Prisma.$genresPayload>
 /**
- * Model Language
+ * Model languages
  * 
  */
-export type Language = $Result.DefaultSelection<Prisma.$LanguagePayload>
+export type languages = $Result.DefaultSelection<Prisma.$languagesPayload>
 /**
- * Model Movie
+ * Model movies
  * 
  */
-export type Movie = $Result.DefaultSelection<Prisma.$MoviePayload>
+export type movies = $Result.DefaultSelection<Prisma.$moviesPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -37,7 +37,7 @@ export type Movie = $Result.DefaultSelection<Prisma.$MoviePayload>
  * ```
  * const prisma = new PrismaClient()
  * // Fetch zero or more Genres
- * const genres = await prisma.genre.findMany()
+ * const genres = await prisma.genres.findMany()
  * ```
  *
  *
@@ -58,7 +58,7 @@ export class PrismaClient<
    * ```
    * const prisma = new PrismaClient()
    * // Fetch zero or more Genres
-   * const genres = await prisma.genre.findMany()
+   * const genres = await prisma.genres.findMany()
    * ```
    *
    *
@@ -155,34 +155,34 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.genre`: Exposes CRUD operations for the **Genre** model.
+   * `prisma.genres`: Exposes CRUD operations for the **genres** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Genres
-    * const genres = await prisma.genre.findMany()
+    * const genres = await prisma.genres.findMany()
     * ```
     */
-  get genre(): Prisma.GenreDelegate<ExtArgs, ClientOptions>;
+  get genres(): Prisma.genresDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.language`: Exposes CRUD operations for the **Language** model.
+   * `prisma.languages`: Exposes CRUD operations for the **languages** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Languages
-    * const languages = await prisma.language.findMany()
+    * const languages = await prisma.languages.findMany()
     * ```
     */
-  get language(): Prisma.LanguageDelegate<ExtArgs, ClientOptions>;
+  get languages(): Prisma.languagesDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.movie`: Exposes CRUD operations for the **Movie** model.
+   * `prisma.movies`: Exposes CRUD operations for the **movies** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Movies
-    * const movies = await prisma.movie.findMany()
+    * const movies = await prisma.movies.findMany()
     * ```
     */
-  get movie(): Prisma.MovieDelegate<ExtArgs, ClientOptions>;
+  get movies(): Prisma.moviesDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -623,9 +623,9 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Genre: 'Genre',
-    Language: 'Language',
-    Movie: 'Movie'
+    genres: 'genres',
+    languages: 'languages',
+    movies: 'movies'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -644,229 +644,229 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "genre" | "language" | "movie"
+      modelProps: "genres" | "languages" | "movies"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Genre: {
-        payload: Prisma.$GenrePayload<ExtArgs>
-        fields: Prisma.GenreFieldRefs
+      genres: {
+        payload: Prisma.$genresPayload<ExtArgs>
+        fields: Prisma.genresFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.GenreFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload> | null
+            args: Prisma.genresFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.GenreFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>
+            args: Prisma.genresFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>
           }
           findFirst: {
-            args: Prisma.GenreFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload> | null
+            args: Prisma.genresFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.GenreFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>
+            args: Prisma.genresFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>
           }
           findMany: {
-            args: Prisma.GenreFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>[]
+            args: Prisma.genresFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>[]
           }
           create: {
-            args: Prisma.GenreCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>
+            args: Prisma.genresCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>
           }
           createMany: {
-            args: Prisma.GenreCreateManyArgs<ExtArgs>
+            args: Prisma.genresCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.GenreCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>[]
+            args: Prisma.genresCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>[]
           }
           delete: {
-            args: Prisma.GenreDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>
+            args: Prisma.genresDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>
           }
           update: {
-            args: Prisma.GenreUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>
+            args: Prisma.genresUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>
           }
           deleteMany: {
-            args: Prisma.GenreDeleteManyArgs<ExtArgs>
+            args: Prisma.genresDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.GenreUpdateManyArgs<ExtArgs>
+            args: Prisma.genresUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.GenreUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>[]
+            args: Prisma.genresUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>[]
           }
           upsert: {
-            args: Prisma.GenreUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$GenrePayload>
+            args: Prisma.genresUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$genresPayload>
           }
           aggregate: {
-            args: Prisma.GenreAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateGenre>
+            args: Prisma.GenresAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGenres>
           }
           groupBy: {
-            args: Prisma.GenreGroupByArgs<ExtArgs>
-            result: $Utils.Optional<GenreGroupByOutputType>[]
+            args: Prisma.genresGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GenresGroupByOutputType>[]
           }
           count: {
-            args: Prisma.GenreCountArgs<ExtArgs>
-            result: $Utils.Optional<GenreCountAggregateOutputType> | number
+            args: Prisma.genresCountArgs<ExtArgs>
+            result: $Utils.Optional<GenresCountAggregateOutputType> | number
           }
         }
       }
-      Language: {
-        payload: Prisma.$LanguagePayload<ExtArgs>
-        fields: Prisma.LanguageFieldRefs
+      languages: {
+        payload: Prisma.$languagesPayload<ExtArgs>
+        fields: Prisma.languagesFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.LanguageFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload> | null
+            args: Prisma.languagesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.LanguageFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>
+            args: Prisma.languagesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>
           }
           findFirst: {
-            args: Prisma.LanguageFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload> | null
+            args: Prisma.languagesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.LanguageFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>
+            args: Prisma.languagesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>
           }
           findMany: {
-            args: Prisma.LanguageFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>[]
+            args: Prisma.languagesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>[]
           }
           create: {
-            args: Prisma.LanguageCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>
+            args: Prisma.languagesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>
           }
           createMany: {
-            args: Prisma.LanguageCreateManyArgs<ExtArgs>
+            args: Prisma.languagesCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.LanguageCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>[]
+            args: Prisma.languagesCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>[]
           }
           delete: {
-            args: Prisma.LanguageDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>
+            args: Prisma.languagesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>
           }
           update: {
-            args: Prisma.LanguageUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>
+            args: Prisma.languagesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>
           }
           deleteMany: {
-            args: Prisma.LanguageDeleteManyArgs<ExtArgs>
+            args: Prisma.languagesDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.LanguageUpdateManyArgs<ExtArgs>
+            args: Prisma.languagesUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.LanguageUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>[]
+            args: Prisma.languagesUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>[]
           }
           upsert: {
-            args: Prisma.LanguageUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$LanguagePayload>
+            args: Prisma.languagesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$languagesPayload>
           }
           aggregate: {
-            args: Prisma.LanguageAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateLanguage>
+            args: Prisma.LanguagesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLanguages>
           }
           groupBy: {
-            args: Prisma.LanguageGroupByArgs<ExtArgs>
-            result: $Utils.Optional<LanguageGroupByOutputType>[]
+            args: Prisma.languagesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LanguagesGroupByOutputType>[]
           }
           count: {
-            args: Prisma.LanguageCountArgs<ExtArgs>
-            result: $Utils.Optional<LanguageCountAggregateOutputType> | number
+            args: Prisma.languagesCountArgs<ExtArgs>
+            result: $Utils.Optional<LanguagesCountAggregateOutputType> | number
           }
         }
       }
-      Movie: {
-        payload: Prisma.$MoviePayload<ExtArgs>
-        fields: Prisma.MovieFieldRefs
+      movies: {
+        payload: Prisma.$moviesPayload<ExtArgs>
+        fields: Prisma.moviesFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.MovieFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload> | null
+            args: Prisma.moviesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.MovieFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>
+            args: Prisma.moviesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>
           }
           findFirst: {
-            args: Prisma.MovieFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload> | null
+            args: Prisma.moviesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.MovieFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>
+            args: Prisma.moviesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>
           }
           findMany: {
-            args: Prisma.MovieFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>[]
+            args: Prisma.moviesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>[]
           }
           create: {
-            args: Prisma.MovieCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>
+            args: Prisma.moviesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>
           }
           createMany: {
-            args: Prisma.MovieCreateManyArgs<ExtArgs>
+            args: Prisma.moviesCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.MovieCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>[]
+            args: Prisma.moviesCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>[]
           }
           delete: {
-            args: Prisma.MovieDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>
+            args: Prisma.moviesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>
           }
           update: {
-            args: Prisma.MovieUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>
+            args: Prisma.moviesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>
           }
           deleteMany: {
-            args: Prisma.MovieDeleteManyArgs<ExtArgs>
+            args: Prisma.moviesDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.MovieUpdateManyArgs<ExtArgs>
+            args: Prisma.moviesUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.MovieUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>[]
+            args: Prisma.moviesUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>[]
           }
           upsert: {
-            args: Prisma.MovieUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MoviePayload>
+            args: Prisma.moviesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$moviesPayload>
           }
           aggregate: {
-            args: Prisma.MovieAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateMovie>
+            args: Prisma.MoviesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateMovies>
           }
           groupBy: {
-            args: Prisma.MovieGroupByArgs<ExtArgs>
-            result: $Utils.Optional<MovieGroupByOutputType>[]
+            args: Prisma.moviesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<MoviesGroupByOutputType>[]
           }
           count: {
-            args: Prisma.MovieCountArgs<ExtArgs>
-            result: $Utils.Optional<MovieCountAggregateOutputType> | number
+            args: Prisma.moviesCountArgs<ExtArgs>
+            result: $Utils.Optional<MoviesCountAggregateOutputType> | number
           }
         }
       }
@@ -954,9 +954,9 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    genre?: GenreOmit
-    language?: LanguageOmit
-    movie?: MovieOmit
+    genres?: genresOmit
+    languages?: languagesOmit
+    movies?: moviesOmit
   }
 
   /* Types for Logging */
@@ -1047,64 +1047,64 @@ export namespace Prisma {
 
 
   /**
-   * Count Type GenreCountOutputType
+   * Count Type GenresCountOutputType
    */
 
-  export type GenreCountOutputType = {
+  export type GenresCountOutputType = {
     movies: number
   }
 
-  export type GenreCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    movies?: boolean | GenreCountOutputTypeCountMoviesArgs
+  export type GenresCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movies?: boolean | GenresCountOutputTypeCountMoviesArgs
   }
 
   // Custom InputTypes
   /**
-   * GenreCountOutputType without action
+   * GenresCountOutputType without action
    */
-  export type GenreCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type GenresCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the GenreCountOutputType
+     * Select specific fields to fetch from the GenresCountOutputType
      */
-    select?: GenreCountOutputTypeSelect<ExtArgs> | null
+    select?: GenresCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * GenreCountOutputType without action
+   * GenresCountOutputType without action
    */
-  export type GenreCountOutputTypeCountMoviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: MovieWhereInput
+  export type GenresCountOutputTypeCountMoviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: moviesWhereInput
   }
 
 
   /**
-   * Count Type LanguageCountOutputType
+   * Count Type LanguagesCountOutputType
    */
 
-  export type LanguageCountOutputType = {
+  export type LanguagesCountOutputType = {
     movies: number
   }
 
-  export type LanguageCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    movies?: boolean | LanguageCountOutputTypeCountMoviesArgs
+  export type LanguagesCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movies?: boolean | LanguagesCountOutputTypeCountMoviesArgs
   }
 
   // Custom InputTypes
   /**
-   * LanguageCountOutputType without action
+   * LanguagesCountOutputType without action
    */
-  export type LanguageCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LanguagesCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the LanguageCountOutputType
+     * Select specific fields to fetch from the LanguagesCountOutputType
      */
-    select?: LanguageCountOutputTypeSelect<ExtArgs> | null
+    select?: LanguagesCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * LanguageCountOutputType without action
+   * LanguagesCountOutputType without action
    */
-  export type LanguageCountOutputTypeCountMoviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: MovieWhereInput
+  export type LanguagesCountOutputTypeCountMoviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: moviesWhereInput
   }
 
 
@@ -1113,344 +1113,344 @@ export namespace Prisma {
    */
 
   /**
-   * Model Genre
+   * Model genres
    */
 
-  export type AggregateGenre = {
-    _count: GenreCountAggregateOutputType | null
-    _avg: GenreAvgAggregateOutputType | null
-    _sum: GenreSumAggregateOutputType | null
-    _min: GenreMinAggregateOutputType | null
-    _max: GenreMaxAggregateOutputType | null
+  export type AggregateGenres = {
+    _count: GenresCountAggregateOutputType | null
+    _avg: GenresAvgAggregateOutputType | null
+    _sum: GenresSumAggregateOutputType | null
+    _min: GenresMinAggregateOutputType | null
+    _max: GenresMaxAggregateOutputType | null
   }
 
-  export type GenreAvgAggregateOutputType = {
+  export type GenresAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type GenreSumAggregateOutputType = {
+  export type GenresSumAggregateOutputType = {
     id: number | null
   }
 
-  export type GenreMinAggregateOutputType = {
-    id: number | null
-    genre_name: string | null
-  }
-
-  export type GenreMaxAggregateOutputType = {
+  export type GenresMinAggregateOutputType = {
     id: number | null
     genre_name: string | null
   }
 
-  export type GenreCountAggregateOutputType = {
+  export type GenresMaxAggregateOutputType = {
+    id: number | null
+    genre_name: string | null
+  }
+
+  export type GenresCountAggregateOutputType = {
     id: number
     genre_name: number
     _all: number
   }
 
 
-  export type GenreAvgAggregateInputType = {
+  export type GenresAvgAggregateInputType = {
     id?: true
   }
 
-  export type GenreSumAggregateInputType = {
+  export type GenresSumAggregateInputType = {
     id?: true
   }
 
-  export type GenreMinAggregateInputType = {
-    id?: true
-    genre_name?: true
-  }
-
-  export type GenreMaxAggregateInputType = {
+  export type GenresMinAggregateInputType = {
     id?: true
     genre_name?: true
   }
 
-  export type GenreCountAggregateInputType = {
+  export type GenresMaxAggregateInputType = {
+    id?: true
+    genre_name?: true
+  }
+
+  export type GenresCountAggregateInputType = {
     id?: true
     genre_name?: true
     _all?: true
   }
 
-  export type GenreAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type GenresAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Genre to aggregate.
+     * Filter which genres to aggregate.
      */
-    where?: GenreWhereInput
+    where?: genresWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Genres to fetch.
+     * Determine the order of genres to fetch.
      */
-    orderBy?: GenreOrderByWithRelationInput | GenreOrderByWithRelationInput[]
+    orderBy?: genresOrderByWithRelationInput | genresOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: GenreWhereUniqueInput
+    cursor?: genresWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Genres from the position of the cursor.
+     * Take `±n` genres from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Genres.
+     * Skip the first `n` genres.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Genres
+     * Count returned genres
     **/
-    _count?: true | GenreCountAggregateInputType
+    _count?: true | GenresCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: GenreAvgAggregateInputType
+    _avg?: GenresAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: GenreSumAggregateInputType
+    _sum?: GenresSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: GenreMinAggregateInputType
+    _min?: GenresMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: GenreMaxAggregateInputType
+    _max?: GenresMaxAggregateInputType
   }
 
-  export type GetGenreAggregateType<T extends GenreAggregateArgs> = {
-        [P in keyof T & keyof AggregateGenre]: P extends '_count' | 'count'
+  export type GetGenresAggregateType<T extends GenresAggregateArgs> = {
+        [P in keyof T & keyof AggregateGenres]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateGenre[P]>
-      : GetScalarType<T[P], AggregateGenre[P]>
+        : GetScalarType<T[P], AggregateGenres[P]>
+      : GetScalarType<T[P], AggregateGenres[P]>
   }
 
 
 
 
-  export type GenreGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: GenreWhereInput
-    orderBy?: GenreOrderByWithAggregationInput | GenreOrderByWithAggregationInput[]
-    by: GenreScalarFieldEnum[] | GenreScalarFieldEnum
-    having?: GenreScalarWhereWithAggregatesInput
+  export type genresGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: genresWhereInput
+    orderBy?: genresOrderByWithAggregationInput | genresOrderByWithAggregationInput[]
+    by: GenresScalarFieldEnum[] | GenresScalarFieldEnum
+    having?: genresScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: GenreCountAggregateInputType | true
-    _avg?: GenreAvgAggregateInputType
-    _sum?: GenreSumAggregateInputType
-    _min?: GenreMinAggregateInputType
-    _max?: GenreMaxAggregateInputType
+    _count?: GenresCountAggregateInputType | true
+    _avg?: GenresAvgAggregateInputType
+    _sum?: GenresSumAggregateInputType
+    _min?: GenresMinAggregateInputType
+    _max?: GenresMaxAggregateInputType
   }
 
-  export type GenreGroupByOutputType = {
+  export type GenresGroupByOutputType = {
     id: number
     genre_name: string | null
-    _count: GenreCountAggregateOutputType | null
-    _avg: GenreAvgAggregateOutputType | null
-    _sum: GenreSumAggregateOutputType | null
-    _min: GenreMinAggregateOutputType | null
-    _max: GenreMaxAggregateOutputType | null
+    _count: GenresCountAggregateOutputType | null
+    _avg: GenresAvgAggregateOutputType | null
+    _sum: GenresSumAggregateOutputType | null
+    _min: GenresMinAggregateOutputType | null
+    _max: GenresMaxAggregateOutputType | null
   }
 
-  type GetGenreGroupByPayload<T extends GenreGroupByArgs> = Prisma.PrismaPromise<
+  type GetGenresGroupByPayload<T extends genresGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<GenreGroupByOutputType, T['by']> &
+      PickEnumerable<GenresGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof GenreGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof GenresGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], GenreGroupByOutputType[P]>
-            : GetScalarType<T[P], GenreGroupByOutputType[P]>
+              : GetScalarType<T[P], GenresGroupByOutputType[P]>
+            : GetScalarType<T[P], GenresGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type GenreSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type genresSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     genre_name?: boolean
-    movies?: boolean | Genre$moviesArgs<ExtArgs>
-    _count?: boolean | GenreCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["genre"]>
+    movies?: boolean | genres$moviesArgs<ExtArgs>
+    _count?: boolean | GenresCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["genres"]>
 
-  export type GenreSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type genresSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     genre_name?: boolean
-  }, ExtArgs["result"]["genre"]>
+  }, ExtArgs["result"]["genres"]>
 
-  export type GenreSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type genresSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     genre_name?: boolean
-  }, ExtArgs["result"]["genre"]>
+  }, ExtArgs["result"]["genres"]>
 
-  export type GenreSelectScalar = {
+  export type genresSelectScalar = {
     id?: boolean
     genre_name?: boolean
   }
 
-  export type GenreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "genre_name", ExtArgs["result"]["genre"]>
-  export type GenreInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    movies?: boolean | Genre$moviesArgs<ExtArgs>
-    _count?: boolean | GenreCountOutputTypeDefaultArgs<ExtArgs>
+  export type genresOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "genre_name", ExtArgs["result"]["genres"]>
+  export type genresInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movies?: boolean | genres$moviesArgs<ExtArgs>
+    _count?: boolean | GenresCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type GenreIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type GenreIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type genresIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type genresIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $GenrePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Genre"
+  export type $genresPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "genres"
     objects: {
-      movies: Prisma.$MoviePayload<ExtArgs>[]
+      movies: Prisma.$moviesPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       genre_name: string | null
-    }, ExtArgs["result"]["genre"]>
+    }, ExtArgs["result"]["genres"]>
     composites: {}
   }
 
-  type GenreGetPayload<S extends boolean | null | undefined | GenreDefaultArgs> = $Result.GetResult<Prisma.$GenrePayload, S>
+  type genresGetPayload<S extends boolean | null | undefined | genresDefaultArgs> = $Result.GetResult<Prisma.$genresPayload, S>
 
-  type GenreCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<GenreFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: GenreCountAggregateInputType | true
+  type genresCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<genresFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GenresCountAggregateInputType | true
     }
 
-  export interface GenreDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Genre'], meta: { name: 'Genre' } }
+  export interface genresDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['genres'], meta: { name: 'genres' } }
     /**
-     * Find zero or one Genre that matches the filter.
-     * @param {GenreFindUniqueArgs} args - Arguments to find a Genre
+     * Find zero or one Genres that matches the filter.
+     * @param {genresFindUniqueArgs} args - Arguments to find a Genres
      * @example
-     * // Get one Genre
-     * const genre = await prisma.genre.findUnique({
+     * // Get one Genres
+     * const genres = await prisma.genres.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends GenreFindUniqueArgs>(args: SelectSubset<T, GenreFindUniqueArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends genresFindUniqueArgs>(args: SelectSubset<T, genresFindUniqueArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Genre that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Genres that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {GenreFindUniqueOrThrowArgs} args - Arguments to find a Genre
+     * @param {genresFindUniqueOrThrowArgs} args - Arguments to find a Genres
      * @example
-     * // Get one Genre
-     * const genre = await prisma.genre.findUniqueOrThrow({
+     * // Get one Genres
+     * const genres = await prisma.genres.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends GenreFindUniqueOrThrowArgs>(args: SelectSubset<T, GenreFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends genresFindUniqueOrThrowArgs>(args: SelectSubset<T, genresFindUniqueOrThrowArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Genre that matches the filter.
+     * Find the first Genres that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {GenreFindFirstArgs} args - Arguments to find a Genre
+     * @param {genresFindFirstArgs} args - Arguments to find a Genres
      * @example
-     * // Get one Genre
-     * const genre = await prisma.genre.findFirst({
+     * // Get one Genres
+     * const genres = await prisma.genres.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends GenreFindFirstArgs>(args?: SelectSubset<T, GenreFindFirstArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends genresFindFirstArgs>(args?: SelectSubset<T, genresFindFirstArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Genre that matches the filter or
+     * Find the first Genres that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {GenreFindFirstOrThrowArgs} args - Arguments to find a Genre
+     * @param {genresFindFirstOrThrowArgs} args - Arguments to find a Genres
      * @example
-     * // Get one Genre
-     * const genre = await prisma.genre.findFirstOrThrow({
+     * // Get one Genres
+     * const genres = await prisma.genres.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends GenreFindFirstOrThrowArgs>(args?: SelectSubset<T, GenreFindFirstOrThrowArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends genresFindFirstOrThrowArgs>(args?: SelectSubset<T, genresFindFirstOrThrowArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Genres that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {GenreFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {genresFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Genres
-     * const genres = await prisma.genre.findMany()
+     * const genres = await prisma.genres.findMany()
      * 
      * // Get first 10 Genres
-     * const genres = await prisma.genre.findMany({ take: 10 })
+     * const genres = await prisma.genres.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const genreWithIdOnly = await prisma.genre.findMany({ select: { id: true } })
+     * const genresWithIdOnly = await prisma.genres.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends GenreFindManyArgs>(args?: SelectSubset<T, GenreFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends genresFindManyArgs>(args?: SelectSubset<T, genresFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Genre.
-     * @param {GenreCreateArgs} args - Arguments to create a Genre.
+     * Create a Genres.
+     * @param {genresCreateArgs} args - Arguments to create a Genres.
      * @example
-     * // Create one Genre
-     * const Genre = await prisma.genre.create({
+     * // Create one Genres
+     * const Genres = await prisma.genres.create({
      *   data: {
-     *     // ... data to create a Genre
+     *     // ... data to create a Genres
      *   }
      * })
      * 
      */
-    create<T extends GenreCreateArgs>(args: SelectSubset<T, GenreCreateArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends genresCreateArgs>(args: SelectSubset<T, genresCreateArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Genres.
-     * @param {GenreCreateManyArgs} args - Arguments to create many Genres.
+     * @param {genresCreateManyArgs} args - Arguments to create many Genres.
      * @example
      * // Create many Genres
-     * const genre = await prisma.genre.createMany({
+     * const genres = await prisma.genres.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends GenreCreateManyArgs>(args?: SelectSubset<T, GenreCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends genresCreateManyArgs>(args?: SelectSubset<T, genresCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Genres and returns the data saved in the database.
-     * @param {GenreCreateManyAndReturnArgs} args - Arguments to create many Genres.
+     * @param {genresCreateManyAndReturnArgs} args - Arguments to create many Genres.
      * @example
      * // Create many Genres
-     * const genre = await prisma.genre.createManyAndReturn({
+     * const genres = await prisma.genres.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
      * // Create many Genres and only return the `id`
-     * const genreWithIdOnly = await prisma.genre.createManyAndReturn({
+     * const genresWithIdOnly = await prisma.genres.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1460,28 +1460,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends GenreCreateManyAndReturnArgs>(args?: SelectSubset<T, GenreCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends genresCreateManyAndReturnArgs>(args?: SelectSubset<T, genresCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Genre.
-     * @param {GenreDeleteArgs} args - Arguments to delete one Genre.
+     * Delete a Genres.
+     * @param {genresDeleteArgs} args - Arguments to delete one Genres.
      * @example
-     * // Delete one Genre
-     * const Genre = await prisma.genre.delete({
+     * // Delete one Genres
+     * const Genres = await prisma.genres.delete({
      *   where: {
-     *     // ... filter to delete one Genre
+     *     // ... filter to delete one Genres
      *   }
      * })
      * 
      */
-    delete<T extends GenreDeleteArgs>(args: SelectSubset<T, GenreDeleteArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends genresDeleteArgs>(args: SelectSubset<T, genresDeleteArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Genre.
-     * @param {GenreUpdateArgs} args - Arguments to update one Genre.
+     * Update one Genres.
+     * @param {genresUpdateArgs} args - Arguments to update one Genres.
      * @example
-     * // Update one Genre
-     * const genre = await prisma.genre.update({
+     * // Update one Genres
+     * const genres = await prisma.genres.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1491,30 +1491,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends GenreUpdateArgs>(args: SelectSubset<T, GenreUpdateArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends genresUpdateArgs>(args: SelectSubset<T, genresUpdateArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Genres.
-     * @param {GenreDeleteManyArgs} args - Arguments to filter Genres to delete.
+     * @param {genresDeleteManyArgs} args - Arguments to filter Genres to delete.
      * @example
      * // Delete a few Genres
-     * const { count } = await prisma.genre.deleteMany({
+     * const { count } = await prisma.genres.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends GenreDeleteManyArgs>(args?: SelectSubset<T, GenreDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends genresDeleteManyArgs>(args?: SelectSubset<T, genresDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Genres.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {GenreUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {genresUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Genres
-     * const genre = await prisma.genre.updateMany({
+     * const genres = await prisma.genres.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1524,14 +1524,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends GenreUpdateManyArgs>(args: SelectSubset<T, GenreUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends genresUpdateManyArgs>(args: SelectSubset<T, genresUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Genres and returns the data updated in the database.
-     * @param {GenreUpdateManyAndReturnArgs} args - Arguments to update many Genres.
+     * @param {genresUpdateManyAndReturnArgs} args - Arguments to update many Genres.
      * @example
      * // Update many Genres
-     * const genre = await prisma.genre.updateManyAndReturn({
+     * const genres = await prisma.genres.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1541,7 +1541,7 @@ export namespace Prisma {
      * })
      * 
      * // Update zero or more Genres and only return the `id`
-     * const genreWithIdOnly = await prisma.genre.updateManyAndReturn({
+     * const genresWithIdOnly = await prisma.genres.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1554,56 +1554,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends GenreUpdateManyAndReturnArgs>(args: SelectSubset<T, GenreUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends genresUpdateManyAndReturnArgs>(args: SelectSubset<T, genresUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Genre.
-     * @param {GenreUpsertArgs} args - Arguments to update or create a Genre.
+     * Create or update one Genres.
+     * @param {genresUpsertArgs} args - Arguments to update or create a Genres.
      * @example
-     * // Update or create a Genre
-     * const genre = await prisma.genre.upsert({
+     * // Update or create a Genres
+     * const genres = await prisma.genres.upsert({
      *   create: {
-     *     // ... data to create a Genre
+     *     // ... data to create a Genres
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Genre we want to update
+     *     // ... the filter for the Genres we want to update
      *   }
      * })
      */
-    upsert<T extends GenreUpsertArgs>(args: SelectSubset<T, GenreUpsertArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends genresUpsertArgs>(args: SelectSubset<T, genresUpsertArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Genres.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {GenreCountArgs} args - Arguments to filter Genres to count.
+     * @param {genresCountArgs} args - Arguments to filter Genres to count.
      * @example
      * // Count the number of Genres
-     * const count = await prisma.genre.count({
+     * const count = await prisma.genres.count({
      *   where: {
      *     // ... the filter for the Genres we want to count
      *   }
      * })
     **/
-    count<T extends GenreCountArgs>(
-      args?: Subset<T, GenreCountArgs>,
+    count<T extends genresCountArgs>(
+      args?: Subset<T, genresCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], GenreCountAggregateOutputType>
+          : GetScalarType<T['select'], GenresCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Genre.
+     * Allows you to perform aggregations operations on a Genres.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {GenreAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {GenresAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1623,13 +1623,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends GenreAggregateArgs>(args: Subset<T, GenreAggregateArgs>): Prisma.PrismaPromise<GetGenreAggregateType<T>>
+    aggregate<T extends GenresAggregateArgs>(args: Subset<T, GenresAggregateArgs>): Prisma.PrismaPromise<GetGenresAggregateType<T>>
 
     /**
-     * Group by Genre.
+     * Group by Genres.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {GenreGroupByArgs} args - Group by arguments.
+     * @param {genresGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1644,14 +1644,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends GenreGroupByArgs,
+      T extends genresGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: GenreGroupByArgs['orderBy'] }
-        : { orderBy?: GenreGroupByArgs['orderBy'] },
+        ? { orderBy: genresGroupByArgs['orderBy'] }
+        : { orderBy?: genresGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1700,22 +1700,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, GenreGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGenreGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, genresGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGenresGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Genre model
+   * Fields of the genres model
    */
-  readonly fields: GenreFieldRefs;
+  readonly fields: genresFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Genre.
+   * The delegate class that acts as a "Promise-like" for genres.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__GenreClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__genresClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    movies<T extends Genre$moviesArgs<ExtArgs> = {}>(args?: Subset<T, Genre$moviesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    movies<T extends genres$moviesArgs<ExtArgs> = {}>(args?: Subset<T, genres$moviesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1742,780 +1742,780 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Genre model
+   * Fields of the genres model
    */
-  interface GenreFieldRefs {
-    readonly id: FieldRef<"Genre", 'Int'>
-    readonly genre_name: FieldRef<"Genre", 'String'>
+  interface genresFieldRefs {
+    readonly id: FieldRef<"genres", 'Int'>
+    readonly genre_name: FieldRef<"genres", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Genre findUnique
+   * genres findUnique
    */
-  export type GenreFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * Filter, which Genre to fetch.
+     * Filter, which genres to fetch.
      */
-    where: GenreWhereUniqueInput
+    where: genresWhereUniqueInput
   }
 
   /**
-   * Genre findUniqueOrThrow
+   * genres findUniqueOrThrow
    */
-  export type GenreFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * Filter, which Genre to fetch.
+     * Filter, which genres to fetch.
      */
-    where: GenreWhereUniqueInput
+    where: genresWhereUniqueInput
   }
 
   /**
-   * Genre findFirst
+   * genres findFirst
    */
-  export type GenreFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * Filter, which Genre to fetch.
+     * Filter, which genres to fetch.
      */
-    where?: GenreWhereInput
+    where?: genresWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Genres to fetch.
+     * Determine the order of genres to fetch.
      */
-    orderBy?: GenreOrderByWithRelationInput | GenreOrderByWithRelationInput[]
+    orderBy?: genresOrderByWithRelationInput | genresOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Genres.
+     * Sets the position for searching for genres.
      */
-    cursor?: GenreWhereUniqueInput
+    cursor?: genresWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Genres from the position of the cursor.
+     * Take `±n` genres from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Genres.
+     * Skip the first `n` genres.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Genres.
+     * Filter by unique combinations of genres.
      */
-    distinct?: GenreScalarFieldEnum | GenreScalarFieldEnum[]
+    distinct?: GenresScalarFieldEnum | GenresScalarFieldEnum[]
   }
 
   /**
-   * Genre findFirstOrThrow
+   * genres findFirstOrThrow
    */
-  export type GenreFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * Filter, which Genre to fetch.
+     * Filter, which genres to fetch.
      */
-    where?: GenreWhereInput
+    where?: genresWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Genres to fetch.
+     * Determine the order of genres to fetch.
      */
-    orderBy?: GenreOrderByWithRelationInput | GenreOrderByWithRelationInput[]
+    orderBy?: genresOrderByWithRelationInput | genresOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Genres.
+     * Sets the position for searching for genres.
      */
-    cursor?: GenreWhereUniqueInput
+    cursor?: genresWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Genres from the position of the cursor.
+     * Take `±n` genres from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Genres.
+     * Skip the first `n` genres.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Genres.
+     * Filter by unique combinations of genres.
      */
-    distinct?: GenreScalarFieldEnum | GenreScalarFieldEnum[]
+    distinct?: GenresScalarFieldEnum | GenresScalarFieldEnum[]
   }
 
   /**
-   * Genre findMany
+   * genres findMany
    */
-  export type GenreFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * Filter, which Genres to fetch.
+     * Filter, which genres to fetch.
      */
-    where?: GenreWhereInput
+    where?: genresWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Genres to fetch.
+     * Determine the order of genres to fetch.
      */
-    orderBy?: GenreOrderByWithRelationInput | GenreOrderByWithRelationInput[]
+    orderBy?: genresOrderByWithRelationInput | genresOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Genres.
+     * Sets the position for listing genres.
      */
-    cursor?: GenreWhereUniqueInput
+    cursor?: genresWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Genres from the position of the cursor.
+     * Take `±n` genres from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Genres.
+     * Skip the first `n` genres.
      */
     skip?: number
-    distinct?: GenreScalarFieldEnum | GenreScalarFieldEnum[]
+    distinct?: GenresScalarFieldEnum | GenresScalarFieldEnum[]
   }
 
   /**
-   * Genre create
+   * genres create
    */
-  export type GenreCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * The data needed to create a Genre.
+     * The data needed to create a genres.
      */
-    data?: XOR<GenreCreateInput, GenreUncheckedCreateInput>
+    data?: XOR<genresCreateInput, genresUncheckedCreateInput>
   }
 
   /**
-   * Genre createMany
+   * genres createMany
    */
-  export type GenreCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Genres.
+     * The data used to create many genres.
      */
-    data: GenreCreateManyInput | GenreCreateManyInput[]
+    data: genresCreateManyInput | genresCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Genre createManyAndReturn
+   * genres createManyAndReturn
    */
-  export type GenreCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelectCreateManyAndReturn<ExtArgs> | null
+    select?: genresSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
-     * The data used to create many Genres.
+     * The data used to create many genres.
      */
-    data: GenreCreateManyInput | GenreCreateManyInput[]
+    data: genresCreateManyInput | genresCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Genre update
+   * genres update
    */
-  export type GenreUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * The data needed to update a Genre.
+     * The data needed to update a genres.
      */
-    data: XOR<GenreUpdateInput, GenreUncheckedUpdateInput>
+    data: XOR<genresUpdateInput, genresUncheckedUpdateInput>
     /**
-     * Choose, which Genre to update.
+     * Choose, which genres to update.
      */
-    where: GenreWhereUniqueInput
+    where: genresWhereUniqueInput
   }
 
   /**
-   * Genre updateMany
+   * genres updateMany
    */
-  export type GenreUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Genres.
+     * The data used to update genres.
      */
-    data: XOR<GenreUpdateManyMutationInput, GenreUncheckedUpdateManyInput>
+    data: XOR<genresUpdateManyMutationInput, genresUncheckedUpdateManyInput>
     /**
-     * Filter which Genres to update
+     * Filter which genres to update
      */
-    where?: GenreWhereInput
+    where?: genresWhereInput
     /**
-     * Limit how many Genres to update.
+     * Limit how many genres to update.
      */
     limit?: number
   }
 
   /**
-   * Genre updateManyAndReturn
+   * genres updateManyAndReturn
    */
-  export type GenreUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: genresSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
-     * The data used to update Genres.
+     * The data used to update genres.
      */
-    data: XOR<GenreUpdateManyMutationInput, GenreUncheckedUpdateManyInput>
+    data: XOR<genresUpdateManyMutationInput, genresUncheckedUpdateManyInput>
     /**
-     * Filter which Genres to update
+     * Filter which genres to update
      */
-    where?: GenreWhereInput
+    where?: genresWhereInput
     /**
-     * Limit how many Genres to update.
+     * Limit how many genres to update.
      */
     limit?: number
   }
 
   /**
-   * Genre upsert
+   * genres upsert
    */
-  export type GenreUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * The filter to search for the Genre to update in case it exists.
+     * The filter to search for the genres to update in case it exists.
      */
-    where: GenreWhereUniqueInput
+    where: genresWhereUniqueInput
     /**
-     * In case the Genre found by the `where` argument doesn't exist, create a new Genre with this data.
+     * In case the genres found by the `where` argument doesn't exist, create a new genres with this data.
      */
-    create: XOR<GenreCreateInput, GenreUncheckedCreateInput>
+    create: XOR<genresCreateInput, genresUncheckedCreateInput>
     /**
-     * In case the Genre was found with the provided `where` argument, update it with this data.
+     * In case the genres was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<GenreUpdateInput, GenreUncheckedUpdateInput>
+    update: XOR<genresUpdateInput, genresUncheckedUpdateInput>
   }
 
   /**
-   * Genre delete
+   * genres delete
    */
-  export type GenreDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
     /**
-     * Filter which Genre to delete.
+     * Filter which genres to delete.
      */
-    where: GenreWhereUniqueInput
+    where: genresWhereUniqueInput
   }
 
   /**
-   * Genre deleteMany
+   * genres deleteMany
    */
-  export type GenreDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Genres to delete
+     * Filter which genres to delete
      */
-    where?: GenreWhereInput
+    where?: genresWhereInput
     /**
-     * Limit how many Genres to delete.
+     * Limit how many genres to delete.
      */
     limit?: number
   }
 
   /**
-   * Genre.movies
+   * genres.movies
    */
-  export type Genre$moviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genres$moviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
-    where?: MovieWhereInput
-    orderBy?: MovieOrderByWithRelationInput | MovieOrderByWithRelationInput[]
-    cursor?: MovieWhereUniqueInput
+    include?: moviesInclude<ExtArgs> | null
+    where?: moviesWhereInput
+    orderBy?: moviesOrderByWithRelationInput | moviesOrderByWithRelationInput[]
+    cursor?: moviesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: MovieScalarFieldEnum | MovieScalarFieldEnum[]
+    distinct?: MoviesScalarFieldEnum | MoviesScalarFieldEnum[]
   }
 
   /**
-   * Genre without action
+   * genres without action
    */
-  export type GenreDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type genresDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
+    include?: genresInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Language
+   * Model languages
    */
 
-  export type AggregateLanguage = {
-    _count: LanguageCountAggregateOutputType | null
-    _avg: LanguageAvgAggregateOutputType | null
-    _sum: LanguageSumAggregateOutputType | null
-    _min: LanguageMinAggregateOutputType | null
-    _max: LanguageMaxAggregateOutputType | null
+  export type AggregateLanguages = {
+    _count: LanguagesCountAggregateOutputType | null
+    _avg: LanguagesAvgAggregateOutputType | null
+    _sum: LanguagesSumAggregateOutputType | null
+    _min: LanguagesMinAggregateOutputType | null
+    _max: LanguagesMaxAggregateOutputType | null
   }
 
-  export type LanguageAvgAggregateOutputType = {
+  export type LanguagesAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type LanguageSumAggregateOutputType = {
+  export type LanguagesSumAggregateOutputType = {
     id: number | null
   }
 
-  export type LanguageMinAggregateOutputType = {
-    id: number | null
-    language_name: string | null
-  }
-
-  export type LanguageMaxAggregateOutputType = {
+  export type LanguagesMinAggregateOutputType = {
     id: number | null
     language_name: string | null
   }
 
-  export type LanguageCountAggregateOutputType = {
+  export type LanguagesMaxAggregateOutputType = {
+    id: number | null
+    language_name: string | null
+  }
+
+  export type LanguagesCountAggregateOutputType = {
     id: number
     language_name: number
     _all: number
   }
 
 
-  export type LanguageAvgAggregateInputType = {
+  export type LanguagesAvgAggregateInputType = {
     id?: true
   }
 
-  export type LanguageSumAggregateInputType = {
+  export type LanguagesSumAggregateInputType = {
     id?: true
   }
 
-  export type LanguageMinAggregateInputType = {
-    id?: true
-    language_name?: true
-  }
-
-  export type LanguageMaxAggregateInputType = {
+  export type LanguagesMinAggregateInputType = {
     id?: true
     language_name?: true
   }
 
-  export type LanguageCountAggregateInputType = {
+  export type LanguagesMaxAggregateInputType = {
+    id?: true
+    language_name?: true
+  }
+
+  export type LanguagesCountAggregateInputType = {
     id?: true
     language_name?: true
     _all?: true
   }
 
-  export type LanguageAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type LanguagesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Language to aggregate.
+     * Filter which languages to aggregate.
      */
-    where?: LanguageWhereInput
+    where?: languagesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Languages to fetch.
+     * Determine the order of languages to fetch.
      */
-    orderBy?: LanguageOrderByWithRelationInput | LanguageOrderByWithRelationInput[]
+    orderBy?: languagesOrderByWithRelationInput | languagesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: LanguageWhereUniqueInput
+    cursor?: languagesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Languages from the position of the cursor.
+     * Take `±n` languages from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Languages.
+     * Skip the first `n` languages.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Languages
+     * Count returned languages
     **/
-    _count?: true | LanguageCountAggregateInputType
+    _count?: true | LanguagesCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: LanguageAvgAggregateInputType
+    _avg?: LanguagesAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: LanguageSumAggregateInputType
+    _sum?: LanguagesSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: LanguageMinAggregateInputType
+    _min?: LanguagesMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: LanguageMaxAggregateInputType
+    _max?: LanguagesMaxAggregateInputType
   }
 
-  export type GetLanguageAggregateType<T extends LanguageAggregateArgs> = {
-        [P in keyof T & keyof AggregateLanguage]: P extends '_count' | 'count'
+  export type GetLanguagesAggregateType<T extends LanguagesAggregateArgs> = {
+        [P in keyof T & keyof AggregateLanguages]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateLanguage[P]>
-      : GetScalarType<T[P], AggregateLanguage[P]>
+        : GetScalarType<T[P], AggregateLanguages[P]>
+      : GetScalarType<T[P], AggregateLanguages[P]>
   }
 
 
 
 
-  export type LanguageGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: LanguageWhereInput
-    orderBy?: LanguageOrderByWithAggregationInput | LanguageOrderByWithAggregationInput[]
-    by: LanguageScalarFieldEnum[] | LanguageScalarFieldEnum
-    having?: LanguageScalarWhereWithAggregatesInput
+  export type languagesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: languagesWhereInput
+    orderBy?: languagesOrderByWithAggregationInput | languagesOrderByWithAggregationInput[]
+    by: LanguagesScalarFieldEnum[] | LanguagesScalarFieldEnum
+    having?: languagesScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: LanguageCountAggregateInputType | true
-    _avg?: LanguageAvgAggregateInputType
-    _sum?: LanguageSumAggregateInputType
-    _min?: LanguageMinAggregateInputType
-    _max?: LanguageMaxAggregateInputType
+    _count?: LanguagesCountAggregateInputType | true
+    _avg?: LanguagesAvgAggregateInputType
+    _sum?: LanguagesSumAggregateInputType
+    _min?: LanguagesMinAggregateInputType
+    _max?: LanguagesMaxAggregateInputType
   }
 
-  export type LanguageGroupByOutputType = {
+  export type LanguagesGroupByOutputType = {
     id: number
     language_name: string | null
-    _count: LanguageCountAggregateOutputType | null
-    _avg: LanguageAvgAggregateOutputType | null
-    _sum: LanguageSumAggregateOutputType | null
-    _min: LanguageMinAggregateOutputType | null
-    _max: LanguageMaxAggregateOutputType | null
+    _count: LanguagesCountAggregateOutputType | null
+    _avg: LanguagesAvgAggregateOutputType | null
+    _sum: LanguagesSumAggregateOutputType | null
+    _min: LanguagesMinAggregateOutputType | null
+    _max: LanguagesMaxAggregateOutputType | null
   }
 
-  type GetLanguageGroupByPayload<T extends LanguageGroupByArgs> = Prisma.PrismaPromise<
+  type GetLanguagesGroupByPayload<T extends languagesGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<LanguageGroupByOutputType, T['by']> &
+      PickEnumerable<LanguagesGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof LanguageGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof LanguagesGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], LanguageGroupByOutputType[P]>
-            : GetScalarType<T[P], LanguageGroupByOutputType[P]>
+              : GetScalarType<T[P], LanguagesGroupByOutputType[P]>
+            : GetScalarType<T[P], LanguagesGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type LanguageSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type languagesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     language_name?: boolean
-    movies?: boolean | Language$moviesArgs<ExtArgs>
-    _count?: boolean | LanguageCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["language"]>
+    movies?: boolean | languages$moviesArgs<ExtArgs>
+    _count?: boolean | LanguagesCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["languages"]>
 
-  export type LanguageSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type languagesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     language_name?: boolean
-  }, ExtArgs["result"]["language"]>
+  }, ExtArgs["result"]["languages"]>
 
-  export type LanguageSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type languagesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     language_name?: boolean
-  }, ExtArgs["result"]["language"]>
+  }, ExtArgs["result"]["languages"]>
 
-  export type LanguageSelectScalar = {
+  export type languagesSelectScalar = {
     id?: boolean
     language_name?: boolean
   }
 
-  export type LanguageOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "language_name", ExtArgs["result"]["language"]>
-  export type LanguageInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    movies?: boolean | Language$moviesArgs<ExtArgs>
-    _count?: boolean | LanguageCountOutputTypeDefaultArgs<ExtArgs>
+  export type languagesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "language_name", ExtArgs["result"]["languages"]>
+  export type languagesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    movies?: boolean | languages$moviesArgs<ExtArgs>
+    _count?: boolean | LanguagesCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type LanguageIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type LanguageIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type languagesIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type languagesIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $LanguagePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Language"
+  export type $languagesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "languages"
     objects: {
-      movies: Prisma.$MoviePayload<ExtArgs>[]
+      movies: Prisma.$moviesPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       language_name: string | null
-    }, ExtArgs["result"]["language"]>
+    }, ExtArgs["result"]["languages"]>
     composites: {}
   }
 
-  type LanguageGetPayload<S extends boolean | null | undefined | LanguageDefaultArgs> = $Result.GetResult<Prisma.$LanguagePayload, S>
+  type languagesGetPayload<S extends boolean | null | undefined | languagesDefaultArgs> = $Result.GetResult<Prisma.$languagesPayload, S>
 
-  type LanguageCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<LanguageFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: LanguageCountAggregateInputType | true
+  type languagesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<languagesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LanguagesCountAggregateInputType | true
     }
 
-  export interface LanguageDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Language'], meta: { name: 'Language' } }
+  export interface languagesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['languages'], meta: { name: 'languages' } }
     /**
-     * Find zero or one Language that matches the filter.
-     * @param {LanguageFindUniqueArgs} args - Arguments to find a Language
+     * Find zero or one Languages that matches the filter.
+     * @param {languagesFindUniqueArgs} args - Arguments to find a Languages
      * @example
-     * // Get one Language
-     * const language = await prisma.language.findUnique({
+     * // Get one Languages
+     * const languages = await prisma.languages.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends LanguageFindUniqueArgs>(args: SelectSubset<T, LanguageFindUniqueArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends languagesFindUniqueArgs>(args: SelectSubset<T, languagesFindUniqueArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Language that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Languages that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {LanguageFindUniqueOrThrowArgs} args - Arguments to find a Language
+     * @param {languagesFindUniqueOrThrowArgs} args - Arguments to find a Languages
      * @example
-     * // Get one Language
-     * const language = await prisma.language.findUniqueOrThrow({
+     * // Get one Languages
+     * const languages = await prisma.languages.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends LanguageFindUniqueOrThrowArgs>(args: SelectSubset<T, LanguageFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends languagesFindUniqueOrThrowArgs>(args: SelectSubset<T, languagesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Language that matches the filter.
+     * Find the first Languages that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LanguageFindFirstArgs} args - Arguments to find a Language
+     * @param {languagesFindFirstArgs} args - Arguments to find a Languages
      * @example
-     * // Get one Language
-     * const language = await prisma.language.findFirst({
+     * // Get one Languages
+     * const languages = await prisma.languages.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends LanguageFindFirstArgs>(args?: SelectSubset<T, LanguageFindFirstArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends languagesFindFirstArgs>(args?: SelectSubset<T, languagesFindFirstArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Language that matches the filter or
+     * Find the first Languages that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LanguageFindFirstOrThrowArgs} args - Arguments to find a Language
+     * @param {languagesFindFirstOrThrowArgs} args - Arguments to find a Languages
      * @example
-     * // Get one Language
-     * const language = await prisma.language.findFirstOrThrow({
+     * // Get one Languages
+     * const languages = await prisma.languages.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends LanguageFindFirstOrThrowArgs>(args?: SelectSubset<T, LanguageFindFirstOrThrowArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends languagesFindFirstOrThrowArgs>(args?: SelectSubset<T, languagesFindFirstOrThrowArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Languages that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LanguageFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {languagesFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Languages
-     * const languages = await prisma.language.findMany()
+     * const languages = await prisma.languages.findMany()
      * 
      * // Get first 10 Languages
-     * const languages = await prisma.language.findMany({ take: 10 })
+     * const languages = await prisma.languages.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const languageWithIdOnly = await prisma.language.findMany({ select: { id: true } })
+     * const languagesWithIdOnly = await prisma.languages.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends LanguageFindManyArgs>(args?: SelectSubset<T, LanguageFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends languagesFindManyArgs>(args?: SelectSubset<T, languagesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Language.
-     * @param {LanguageCreateArgs} args - Arguments to create a Language.
+     * Create a Languages.
+     * @param {languagesCreateArgs} args - Arguments to create a Languages.
      * @example
-     * // Create one Language
-     * const Language = await prisma.language.create({
+     * // Create one Languages
+     * const Languages = await prisma.languages.create({
      *   data: {
-     *     // ... data to create a Language
+     *     // ... data to create a Languages
      *   }
      * })
      * 
      */
-    create<T extends LanguageCreateArgs>(args: SelectSubset<T, LanguageCreateArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends languagesCreateArgs>(args: SelectSubset<T, languagesCreateArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Languages.
-     * @param {LanguageCreateManyArgs} args - Arguments to create many Languages.
+     * @param {languagesCreateManyArgs} args - Arguments to create many Languages.
      * @example
      * // Create many Languages
-     * const language = await prisma.language.createMany({
+     * const languages = await prisma.languages.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends LanguageCreateManyArgs>(args?: SelectSubset<T, LanguageCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends languagesCreateManyArgs>(args?: SelectSubset<T, languagesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Languages and returns the data saved in the database.
-     * @param {LanguageCreateManyAndReturnArgs} args - Arguments to create many Languages.
+     * @param {languagesCreateManyAndReturnArgs} args - Arguments to create many Languages.
      * @example
      * // Create many Languages
-     * const language = await prisma.language.createManyAndReturn({
+     * const languages = await prisma.languages.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
      * // Create many Languages and only return the `id`
-     * const languageWithIdOnly = await prisma.language.createManyAndReturn({
+     * const languagesWithIdOnly = await prisma.languages.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2525,28 +2525,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends LanguageCreateManyAndReturnArgs>(args?: SelectSubset<T, LanguageCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends languagesCreateManyAndReturnArgs>(args?: SelectSubset<T, languagesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Language.
-     * @param {LanguageDeleteArgs} args - Arguments to delete one Language.
+     * Delete a Languages.
+     * @param {languagesDeleteArgs} args - Arguments to delete one Languages.
      * @example
-     * // Delete one Language
-     * const Language = await prisma.language.delete({
+     * // Delete one Languages
+     * const Languages = await prisma.languages.delete({
      *   where: {
-     *     // ... filter to delete one Language
+     *     // ... filter to delete one Languages
      *   }
      * })
      * 
      */
-    delete<T extends LanguageDeleteArgs>(args: SelectSubset<T, LanguageDeleteArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends languagesDeleteArgs>(args: SelectSubset<T, languagesDeleteArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Language.
-     * @param {LanguageUpdateArgs} args - Arguments to update one Language.
+     * Update one Languages.
+     * @param {languagesUpdateArgs} args - Arguments to update one Languages.
      * @example
-     * // Update one Language
-     * const language = await prisma.language.update({
+     * // Update one Languages
+     * const languages = await prisma.languages.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2556,30 +2556,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends LanguageUpdateArgs>(args: SelectSubset<T, LanguageUpdateArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends languagesUpdateArgs>(args: SelectSubset<T, languagesUpdateArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Languages.
-     * @param {LanguageDeleteManyArgs} args - Arguments to filter Languages to delete.
+     * @param {languagesDeleteManyArgs} args - Arguments to filter Languages to delete.
      * @example
      * // Delete a few Languages
-     * const { count } = await prisma.language.deleteMany({
+     * const { count } = await prisma.languages.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends LanguageDeleteManyArgs>(args?: SelectSubset<T, LanguageDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends languagesDeleteManyArgs>(args?: SelectSubset<T, languagesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Languages.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LanguageUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {languagesUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Languages
-     * const language = await prisma.language.updateMany({
+     * const languages = await prisma.languages.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2589,14 +2589,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends LanguageUpdateManyArgs>(args: SelectSubset<T, LanguageUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends languagesUpdateManyArgs>(args: SelectSubset<T, languagesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Languages and returns the data updated in the database.
-     * @param {LanguageUpdateManyAndReturnArgs} args - Arguments to update many Languages.
+     * @param {languagesUpdateManyAndReturnArgs} args - Arguments to update many Languages.
      * @example
      * // Update many Languages
-     * const language = await prisma.language.updateManyAndReturn({
+     * const languages = await prisma.languages.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2606,7 +2606,7 @@ export namespace Prisma {
      * })
      * 
      * // Update zero or more Languages and only return the `id`
-     * const languageWithIdOnly = await prisma.language.updateManyAndReturn({
+     * const languagesWithIdOnly = await prisma.languages.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2619,56 +2619,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends LanguageUpdateManyAndReturnArgs>(args: SelectSubset<T, LanguageUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends languagesUpdateManyAndReturnArgs>(args: SelectSubset<T, languagesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Language.
-     * @param {LanguageUpsertArgs} args - Arguments to update or create a Language.
+     * Create or update one Languages.
+     * @param {languagesUpsertArgs} args - Arguments to update or create a Languages.
      * @example
-     * // Update or create a Language
-     * const language = await prisma.language.upsert({
+     * // Update or create a Languages
+     * const languages = await prisma.languages.upsert({
      *   create: {
-     *     // ... data to create a Language
+     *     // ... data to create a Languages
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Language we want to update
+     *     // ... the filter for the Languages we want to update
      *   }
      * })
      */
-    upsert<T extends LanguageUpsertArgs>(args: SelectSubset<T, LanguageUpsertArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends languagesUpsertArgs>(args: SelectSubset<T, languagesUpsertArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Languages.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LanguageCountArgs} args - Arguments to filter Languages to count.
+     * @param {languagesCountArgs} args - Arguments to filter Languages to count.
      * @example
      * // Count the number of Languages
-     * const count = await prisma.language.count({
+     * const count = await prisma.languages.count({
      *   where: {
      *     // ... the filter for the Languages we want to count
      *   }
      * })
     **/
-    count<T extends LanguageCountArgs>(
-      args?: Subset<T, LanguageCountArgs>,
+    count<T extends languagesCountArgs>(
+      args?: Subset<T, languagesCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], LanguageCountAggregateOutputType>
+          : GetScalarType<T['select'], LanguagesCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Language.
+     * Allows you to perform aggregations operations on a Languages.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LanguageAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {LanguagesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2688,13 +2688,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends LanguageAggregateArgs>(args: Subset<T, LanguageAggregateArgs>): Prisma.PrismaPromise<GetLanguageAggregateType<T>>
+    aggregate<T extends LanguagesAggregateArgs>(args: Subset<T, LanguagesAggregateArgs>): Prisma.PrismaPromise<GetLanguagesAggregateType<T>>
 
     /**
-     * Group by Language.
+     * Group by Languages.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {LanguageGroupByArgs} args - Group by arguments.
+     * @param {languagesGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2709,14 +2709,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends LanguageGroupByArgs,
+      T extends languagesGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: LanguageGroupByArgs['orderBy'] }
-        : { orderBy?: LanguageGroupByArgs['orderBy'] },
+        ? { orderBy: languagesGroupByArgs['orderBy'] }
+        : { orderBy?: languagesGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2765,22 +2765,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, LanguageGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLanguageGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, languagesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLanguagesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Language model
+   * Fields of the languages model
    */
-  readonly fields: LanguageFieldRefs;
+  readonly fields: languagesFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Language.
+   * The delegate class that acts as a "Promise-like" for languages.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__LanguageClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__languagesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    movies<T extends Language$moviesArgs<ExtArgs> = {}>(args?: Subset<T, Language$moviesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    movies<T extends languages$moviesArgs<ExtArgs> = {}>(args?: Subset<T, languages$moviesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2807,480 +2807,480 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Language model
+   * Fields of the languages model
    */
-  interface LanguageFieldRefs {
-    readonly id: FieldRef<"Language", 'Int'>
-    readonly language_name: FieldRef<"Language", 'String'>
+  interface languagesFieldRefs {
+    readonly id: FieldRef<"languages", 'Int'>
+    readonly language_name: FieldRef<"languages", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Language findUnique
+   * languages findUnique
    */
-  export type LanguageFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * Filter, which Language to fetch.
+     * Filter, which languages to fetch.
      */
-    where: LanguageWhereUniqueInput
+    where: languagesWhereUniqueInput
   }
 
   /**
-   * Language findUniqueOrThrow
+   * languages findUniqueOrThrow
    */
-  export type LanguageFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * Filter, which Language to fetch.
+     * Filter, which languages to fetch.
      */
-    where: LanguageWhereUniqueInput
+    where: languagesWhereUniqueInput
   }
 
   /**
-   * Language findFirst
+   * languages findFirst
    */
-  export type LanguageFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * Filter, which Language to fetch.
+     * Filter, which languages to fetch.
      */
-    where?: LanguageWhereInput
+    where?: languagesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Languages to fetch.
+     * Determine the order of languages to fetch.
      */
-    orderBy?: LanguageOrderByWithRelationInput | LanguageOrderByWithRelationInput[]
+    orderBy?: languagesOrderByWithRelationInput | languagesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Languages.
+     * Sets the position for searching for languages.
      */
-    cursor?: LanguageWhereUniqueInput
+    cursor?: languagesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Languages from the position of the cursor.
+     * Take `±n` languages from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Languages.
+     * Skip the first `n` languages.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Languages.
+     * Filter by unique combinations of languages.
      */
-    distinct?: LanguageScalarFieldEnum | LanguageScalarFieldEnum[]
+    distinct?: LanguagesScalarFieldEnum | LanguagesScalarFieldEnum[]
   }
 
   /**
-   * Language findFirstOrThrow
+   * languages findFirstOrThrow
    */
-  export type LanguageFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * Filter, which Language to fetch.
+     * Filter, which languages to fetch.
      */
-    where?: LanguageWhereInput
+    where?: languagesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Languages to fetch.
+     * Determine the order of languages to fetch.
      */
-    orderBy?: LanguageOrderByWithRelationInput | LanguageOrderByWithRelationInput[]
+    orderBy?: languagesOrderByWithRelationInput | languagesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Languages.
+     * Sets the position for searching for languages.
      */
-    cursor?: LanguageWhereUniqueInput
+    cursor?: languagesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Languages from the position of the cursor.
+     * Take `±n` languages from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Languages.
+     * Skip the first `n` languages.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Languages.
+     * Filter by unique combinations of languages.
      */
-    distinct?: LanguageScalarFieldEnum | LanguageScalarFieldEnum[]
+    distinct?: LanguagesScalarFieldEnum | LanguagesScalarFieldEnum[]
   }
 
   /**
-   * Language findMany
+   * languages findMany
    */
-  export type LanguageFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * Filter, which Languages to fetch.
+     * Filter, which languages to fetch.
      */
-    where?: LanguageWhereInput
+    where?: languagesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Languages to fetch.
+     * Determine the order of languages to fetch.
      */
-    orderBy?: LanguageOrderByWithRelationInput | LanguageOrderByWithRelationInput[]
+    orderBy?: languagesOrderByWithRelationInput | languagesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Languages.
+     * Sets the position for listing languages.
      */
-    cursor?: LanguageWhereUniqueInput
+    cursor?: languagesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Languages from the position of the cursor.
+     * Take `±n` languages from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Languages.
+     * Skip the first `n` languages.
      */
     skip?: number
-    distinct?: LanguageScalarFieldEnum | LanguageScalarFieldEnum[]
+    distinct?: LanguagesScalarFieldEnum | LanguagesScalarFieldEnum[]
   }
 
   /**
-   * Language create
+   * languages create
    */
-  export type LanguageCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * The data needed to create a Language.
+     * The data needed to create a languages.
      */
-    data?: XOR<LanguageCreateInput, LanguageUncheckedCreateInput>
+    data?: XOR<languagesCreateInput, languagesUncheckedCreateInput>
   }
 
   /**
-   * Language createMany
+   * languages createMany
    */
-  export type LanguageCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Languages.
+     * The data used to create many languages.
      */
-    data: LanguageCreateManyInput | LanguageCreateManyInput[]
+    data: languagesCreateManyInput | languagesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Language createManyAndReturn
+   * languages createManyAndReturn
    */
-  export type LanguageCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelectCreateManyAndReturn<ExtArgs> | null
+    select?: languagesSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
-     * The data used to create many Languages.
+     * The data used to create many languages.
      */
-    data: LanguageCreateManyInput | LanguageCreateManyInput[]
+    data: languagesCreateManyInput | languagesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Language update
+   * languages update
    */
-  export type LanguageUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * The data needed to update a Language.
+     * The data needed to update a languages.
      */
-    data: XOR<LanguageUpdateInput, LanguageUncheckedUpdateInput>
+    data: XOR<languagesUpdateInput, languagesUncheckedUpdateInput>
     /**
-     * Choose, which Language to update.
+     * Choose, which languages to update.
      */
-    where: LanguageWhereUniqueInput
+    where: languagesWhereUniqueInput
   }
 
   /**
-   * Language updateMany
+   * languages updateMany
    */
-  export type LanguageUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Languages.
+     * The data used to update languages.
      */
-    data: XOR<LanguageUpdateManyMutationInput, LanguageUncheckedUpdateManyInput>
+    data: XOR<languagesUpdateManyMutationInput, languagesUncheckedUpdateManyInput>
     /**
-     * Filter which Languages to update
+     * Filter which languages to update
      */
-    where?: LanguageWhereInput
+    where?: languagesWhereInput
     /**
-     * Limit how many Languages to update.
+     * Limit how many languages to update.
      */
     limit?: number
   }
 
   /**
-   * Language updateManyAndReturn
+   * languages updateManyAndReturn
    */
-  export type LanguageUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: languagesSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
-     * The data used to update Languages.
+     * The data used to update languages.
      */
-    data: XOR<LanguageUpdateManyMutationInput, LanguageUncheckedUpdateManyInput>
+    data: XOR<languagesUpdateManyMutationInput, languagesUncheckedUpdateManyInput>
     /**
-     * Filter which Languages to update
+     * Filter which languages to update
      */
-    where?: LanguageWhereInput
+    where?: languagesWhereInput
     /**
-     * Limit how many Languages to update.
+     * Limit how many languages to update.
      */
     limit?: number
   }
 
   /**
-   * Language upsert
+   * languages upsert
    */
-  export type LanguageUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * The filter to search for the Language to update in case it exists.
+     * The filter to search for the languages to update in case it exists.
      */
-    where: LanguageWhereUniqueInput
+    where: languagesWhereUniqueInput
     /**
-     * In case the Language found by the `where` argument doesn't exist, create a new Language with this data.
+     * In case the languages found by the `where` argument doesn't exist, create a new languages with this data.
      */
-    create: XOR<LanguageCreateInput, LanguageUncheckedCreateInput>
+    create: XOR<languagesCreateInput, languagesUncheckedCreateInput>
     /**
-     * In case the Language was found with the provided `where` argument, update it with this data.
+     * In case the languages was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<LanguageUpdateInput, LanguageUncheckedUpdateInput>
+    update: XOR<languagesUpdateInput, languagesUncheckedUpdateInput>
   }
 
   /**
-   * Language delete
+   * languages delete
    */
-  export type LanguageDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
     /**
-     * Filter which Language to delete.
+     * Filter which languages to delete.
      */
-    where: LanguageWhereUniqueInput
+    where: languagesWhereUniqueInput
   }
 
   /**
-   * Language deleteMany
+   * languages deleteMany
    */
-  export type LanguageDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Languages to delete
+     * Filter which languages to delete
      */
-    where?: LanguageWhereInput
+    where?: languagesWhereInput
     /**
-     * Limit how many Languages to delete.
+     * Limit how many languages to delete.
      */
     limit?: number
   }
 
   /**
-   * Language.movies
+   * languages.movies
    */
-  export type Language$moviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languages$moviesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
-    where?: MovieWhereInput
-    orderBy?: MovieOrderByWithRelationInput | MovieOrderByWithRelationInput[]
-    cursor?: MovieWhereUniqueInput
+    include?: moviesInclude<ExtArgs> | null
+    where?: moviesWhereInput
+    orderBy?: moviesOrderByWithRelationInput | moviesOrderByWithRelationInput[]
+    cursor?: moviesWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: MovieScalarFieldEnum | MovieScalarFieldEnum[]
+    distinct?: MoviesScalarFieldEnum | MoviesScalarFieldEnum[]
   }
 
   /**
-   * Language without action
+   * languages without action
    */
-  export type LanguageDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type languagesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
+    include?: languagesInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Movie
+   * Model movies
    */
 
-  export type AggregateMovie = {
-    _count: MovieCountAggregateOutputType | null
-    _avg: MovieAvgAggregateOutputType | null
-    _sum: MovieSumAggregateOutputType | null
-    _min: MovieMinAggregateOutputType | null
-    _max: MovieMaxAggregateOutputType | null
+  export type AggregateMovies = {
+    _count: MoviesCountAggregateOutputType | null
+    _avg: MoviesAvgAggregateOutputType | null
+    _sum: MoviesSumAggregateOutputType | null
+    _min: MoviesMinAggregateOutputType | null
+    _max: MoviesMaxAggregateOutputType | null
   }
 
-  export type MovieAvgAggregateOutputType = {
+  export type MoviesAvgAggregateOutputType = {
     id: number | null
     movie_language: number | null
     genre_movie: number | null
   }
 
-  export type MovieSumAggregateOutputType = {
+  export type MoviesSumAggregateOutputType = {
     id: number | null
     movie_language: number | null
     genre_movie: number | null
   }
 
-  export type MovieMinAggregateOutputType = {
+  export type MoviesMinAggregateOutputType = {
     id: number | null
     movie_name: string | null
     movie_language: number | null
     genre_movie: number | null
   }
 
-  export type MovieMaxAggregateOutputType = {
+  export type MoviesMaxAggregateOutputType = {
     id: number | null
     movie_name: string | null
     movie_language: number | null
     genre_movie: number | null
   }
 
-  export type MovieCountAggregateOutputType = {
+  export type MoviesCountAggregateOutputType = {
     id: number
     movie_name: number
     movie_language: number
@@ -3289,33 +3289,33 @@ export namespace Prisma {
   }
 
 
-  export type MovieAvgAggregateInputType = {
+  export type MoviesAvgAggregateInputType = {
     id?: true
     movie_language?: true
     genre_movie?: true
   }
 
-  export type MovieSumAggregateInputType = {
+  export type MoviesSumAggregateInputType = {
     id?: true
     movie_language?: true
     genre_movie?: true
   }
 
-  export type MovieMinAggregateInputType = {
-    id?: true
-    movie_name?: true
-    movie_language?: true
-    genre_movie?: true
-  }
-
-  export type MovieMaxAggregateInputType = {
+  export type MoviesMinAggregateInputType = {
     id?: true
     movie_name?: true
     movie_language?: true
     genre_movie?: true
   }
 
-  export type MovieCountAggregateInputType = {
+  export type MoviesMaxAggregateInputType = {
+    id?: true
+    movie_name?: true
+    movie_language?: true
+    genre_movie?: true
+  }
+
+  export type MoviesCountAggregateInputType = {
     id?: true
     movie_name?: true
     movie_language?: true
@@ -3323,307 +3323,307 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type MovieAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MoviesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Movie to aggregate.
+     * Filter which movies to aggregate.
      */
-    where?: MovieWhereInput
+    where?: moviesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Movies to fetch.
+     * Determine the order of movies to fetch.
      */
-    orderBy?: MovieOrderByWithRelationInput | MovieOrderByWithRelationInput[]
+    orderBy?: moviesOrderByWithRelationInput | moviesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: MovieWhereUniqueInput
+    cursor?: moviesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Movies from the position of the cursor.
+     * Take `±n` movies from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Movies.
+     * Skip the first `n` movies.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Movies
+     * Count returned movies
     **/
-    _count?: true | MovieCountAggregateInputType
+    _count?: true | MoviesCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: MovieAvgAggregateInputType
+    _avg?: MoviesAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: MovieSumAggregateInputType
+    _sum?: MoviesSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: MovieMinAggregateInputType
+    _min?: MoviesMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: MovieMaxAggregateInputType
+    _max?: MoviesMaxAggregateInputType
   }
 
-  export type GetMovieAggregateType<T extends MovieAggregateArgs> = {
-        [P in keyof T & keyof AggregateMovie]: P extends '_count' | 'count'
+  export type GetMoviesAggregateType<T extends MoviesAggregateArgs> = {
+        [P in keyof T & keyof AggregateMovies]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateMovie[P]>
-      : GetScalarType<T[P], AggregateMovie[P]>
+        : GetScalarType<T[P], AggregateMovies[P]>
+      : GetScalarType<T[P], AggregateMovies[P]>
   }
 
 
 
 
-  export type MovieGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: MovieWhereInput
-    orderBy?: MovieOrderByWithAggregationInput | MovieOrderByWithAggregationInput[]
-    by: MovieScalarFieldEnum[] | MovieScalarFieldEnum
-    having?: MovieScalarWhereWithAggregatesInput
+  export type moviesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: moviesWhereInput
+    orderBy?: moviesOrderByWithAggregationInput | moviesOrderByWithAggregationInput[]
+    by: MoviesScalarFieldEnum[] | MoviesScalarFieldEnum
+    having?: moviesScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: MovieCountAggregateInputType | true
-    _avg?: MovieAvgAggregateInputType
-    _sum?: MovieSumAggregateInputType
-    _min?: MovieMinAggregateInputType
-    _max?: MovieMaxAggregateInputType
+    _count?: MoviesCountAggregateInputType | true
+    _avg?: MoviesAvgAggregateInputType
+    _sum?: MoviesSumAggregateInputType
+    _min?: MoviesMinAggregateInputType
+    _max?: MoviesMaxAggregateInputType
   }
 
-  export type MovieGroupByOutputType = {
+  export type MoviesGroupByOutputType = {
     id: number
     movie_name: string | null
     movie_language: number | null
     genre_movie: number | null
-    _count: MovieCountAggregateOutputType | null
-    _avg: MovieAvgAggregateOutputType | null
-    _sum: MovieSumAggregateOutputType | null
-    _min: MovieMinAggregateOutputType | null
-    _max: MovieMaxAggregateOutputType | null
+    _count: MoviesCountAggregateOutputType | null
+    _avg: MoviesAvgAggregateOutputType | null
+    _sum: MoviesSumAggregateOutputType | null
+    _min: MoviesMinAggregateOutputType | null
+    _max: MoviesMaxAggregateOutputType | null
   }
 
-  type GetMovieGroupByPayload<T extends MovieGroupByArgs> = Prisma.PrismaPromise<
+  type GetMoviesGroupByPayload<T extends moviesGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<MovieGroupByOutputType, T['by']> &
+      PickEnumerable<MoviesGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof MovieGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof MoviesGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], MovieGroupByOutputType[P]>
-            : GetScalarType<T[P], MovieGroupByOutputType[P]>
+              : GetScalarType<T[P], MoviesGroupByOutputType[P]>
+            : GetScalarType<T[P], MoviesGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type MovieSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type moviesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     movie_name?: boolean
     movie_language?: boolean
     genre_movie?: boolean
-    genres?: boolean | Movie$genresArgs<ExtArgs>
-    languages?: boolean | Movie$languagesArgs<ExtArgs>
-  }, ExtArgs["result"]["movie"]>
+    genres?: boolean | movies$genresArgs<ExtArgs>
+    languages?: boolean | movies$languagesArgs<ExtArgs>
+  }, ExtArgs["result"]["movies"]>
 
-  export type MovieSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type moviesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     movie_name?: boolean
     movie_language?: boolean
     genre_movie?: boolean
-    genres?: boolean | Movie$genresArgs<ExtArgs>
-    languages?: boolean | Movie$languagesArgs<ExtArgs>
-  }, ExtArgs["result"]["movie"]>
+    genres?: boolean | movies$genresArgs<ExtArgs>
+    languages?: boolean | movies$languagesArgs<ExtArgs>
+  }, ExtArgs["result"]["movies"]>
 
-  export type MovieSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type moviesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     movie_name?: boolean
     movie_language?: boolean
     genre_movie?: boolean
-    genres?: boolean | Movie$genresArgs<ExtArgs>
-    languages?: boolean | Movie$languagesArgs<ExtArgs>
-  }, ExtArgs["result"]["movie"]>
+    genres?: boolean | movies$genresArgs<ExtArgs>
+    languages?: boolean | movies$languagesArgs<ExtArgs>
+  }, ExtArgs["result"]["movies"]>
 
-  export type MovieSelectScalar = {
+  export type moviesSelectScalar = {
     id?: boolean
     movie_name?: boolean
     movie_language?: boolean
     genre_movie?: boolean
   }
 
-  export type MovieOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "movie_name" | "movie_language" | "genre_movie", ExtArgs["result"]["movie"]>
-  export type MovieInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    genres?: boolean | Movie$genresArgs<ExtArgs>
-    languages?: boolean | Movie$languagesArgs<ExtArgs>
+  export type moviesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "movie_name" | "movie_language" | "genre_movie", ExtArgs["result"]["movies"]>
+  export type moviesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    genres?: boolean | movies$genresArgs<ExtArgs>
+    languages?: boolean | movies$languagesArgs<ExtArgs>
   }
-  export type MovieIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    genres?: boolean | Movie$genresArgs<ExtArgs>
-    languages?: boolean | Movie$languagesArgs<ExtArgs>
+  export type moviesIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    genres?: boolean | movies$genresArgs<ExtArgs>
+    languages?: boolean | movies$languagesArgs<ExtArgs>
   }
-  export type MovieIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    genres?: boolean | Movie$genresArgs<ExtArgs>
-    languages?: boolean | Movie$languagesArgs<ExtArgs>
+  export type moviesIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    genres?: boolean | movies$genresArgs<ExtArgs>
+    languages?: boolean | movies$languagesArgs<ExtArgs>
   }
 
-  export type $MoviePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Movie"
+  export type $moviesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "movies"
     objects: {
-      genres: Prisma.$GenrePayload<ExtArgs> | null
-      languages: Prisma.$LanguagePayload<ExtArgs> | null
+      genres: Prisma.$genresPayload<ExtArgs> | null
+      languages: Prisma.$languagesPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       movie_name: string | null
       movie_language: number | null
       genre_movie: number | null
-    }, ExtArgs["result"]["movie"]>
+    }, ExtArgs["result"]["movies"]>
     composites: {}
   }
 
-  type MovieGetPayload<S extends boolean | null | undefined | MovieDefaultArgs> = $Result.GetResult<Prisma.$MoviePayload, S>
+  type moviesGetPayload<S extends boolean | null | undefined | moviesDefaultArgs> = $Result.GetResult<Prisma.$moviesPayload, S>
 
-  type MovieCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<MovieFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: MovieCountAggregateInputType | true
+  type moviesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<moviesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: MoviesCountAggregateInputType | true
     }
 
-  export interface MovieDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Movie'], meta: { name: 'Movie' } }
+  export interface moviesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['movies'], meta: { name: 'movies' } }
     /**
-     * Find zero or one Movie that matches the filter.
-     * @param {MovieFindUniqueArgs} args - Arguments to find a Movie
+     * Find zero or one Movies that matches the filter.
+     * @param {moviesFindUniqueArgs} args - Arguments to find a Movies
      * @example
-     * // Get one Movie
-     * const movie = await prisma.movie.findUnique({
+     * // Get one Movies
+     * const movies = await prisma.movies.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends MovieFindUniqueArgs>(args: SelectSubset<T, MovieFindUniqueArgs<ExtArgs>>): Prisma__MovieClient<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends moviesFindUniqueArgs>(args: SelectSubset<T, moviesFindUniqueArgs<ExtArgs>>): Prisma__moviesClient<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Movie that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Movies that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {MovieFindUniqueOrThrowArgs} args - Arguments to find a Movie
+     * @param {moviesFindUniqueOrThrowArgs} args - Arguments to find a Movies
      * @example
-     * // Get one Movie
-     * const movie = await prisma.movie.findUniqueOrThrow({
+     * // Get one Movies
+     * const movies = await prisma.movies.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends MovieFindUniqueOrThrowArgs>(args: SelectSubset<T, MovieFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MovieClient<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends moviesFindUniqueOrThrowArgs>(args: SelectSubset<T, moviesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__moviesClient<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Movie that matches the filter.
+     * Find the first Movies that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieFindFirstArgs} args - Arguments to find a Movie
+     * @param {moviesFindFirstArgs} args - Arguments to find a Movies
      * @example
-     * // Get one Movie
-     * const movie = await prisma.movie.findFirst({
+     * // Get one Movies
+     * const movies = await prisma.movies.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends MovieFindFirstArgs>(args?: SelectSubset<T, MovieFindFirstArgs<ExtArgs>>): Prisma__MovieClient<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends moviesFindFirstArgs>(args?: SelectSubset<T, moviesFindFirstArgs<ExtArgs>>): Prisma__moviesClient<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Movie that matches the filter or
+     * Find the first Movies that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieFindFirstOrThrowArgs} args - Arguments to find a Movie
+     * @param {moviesFindFirstOrThrowArgs} args - Arguments to find a Movies
      * @example
-     * // Get one Movie
-     * const movie = await prisma.movie.findFirstOrThrow({
+     * // Get one Movies
+     * const movies = await prisma.movies.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends MovieFindFirstOrThrowArgs>(args?: SelectSubset<T, MovieFindFirstOrThrowArgs<ExtArgs>>): Prisma__MovieClient<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends moviesFindFirstOrThrowArgs>(args?: SelectSubset<T, moviesFindFirstOrThrowArgs<ExtArgs>>): Prisma__moviesClient<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Movies that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {moviesFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Movies
-     * const movies = await prisma.movie.findMany()
+     * const movies = await prisma.movies.findMany()
      * 
      * // Get first 10 Movies
-     * const movies = await prisma.movie.findMany({ take: 10 })
+     * const movies = await prisma.movies.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const movieWithIdOnly = await prisma.movie.findMany({ select: { id: true } })
+     * const moviesWithIdOnly = await prisma.movies.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends MovieFindManyArgs>(args?: SelectSubset<T, MovieFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends moviesFindManyArgs>(args?: SelectSubset<T, moviesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Movie.
-     * @param {MovieCreateArgs} args - Arguments to create a Movie.
+     * Create a Movies.
+     * @param {moviesCreateArgs} args - Arguments to create a Movies.
      * @example
-     * // Create one Movie
-     * const Movie = await prisma.movie.create({
+     * // Create one Movies
+     * const Movies = await prisma.movies.create({
      *   data: {
-     *     // ... data to create a Movie
+     *     // ... data to create a Movies
      *   }
      * })
      * 
      */
-    create<T extends MovieCreateArgs>(args: SelectSubset<T, MovieCreateArgs<ExtArgs>>): Prisma__MovieClient<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends moviesCreateArgs>(args: SelectSubset<T, moviesCreateArgs<ExtArgs>>): Prisma__moviesClient<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Movies.
-     * @param {MovieCreateManyArgs} args - Arguments to create many Movies.
+     * @param {moviesCreateManyArgs} args - Arguments to create many Movies.
      * @example
      * // Create many Movies
-     * const movie = await prisma.movie.createMany({
+     * const movies = await prisma.movies.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends MovieCreateManyArgs>(args?: SelectSubset<T, MovieCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends moviesCreateManyArgs>(args?: SelectSubset<T, moviesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Movies and returns the data saved in the database.
-     * @param {MovieCreateManyAndReturnArgs} args - Arguments to create many Movies.
+     * @param {moviesCreateManyAndReturnArgs} args - Arguments to create many Movies.
      * @example
      * // Create many Movies
-     * const movie = await prisma.movie.createManyAndReturn({
+     * const movies = await prisma.movies.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
      * // Create many Movies and only return the `id`
-     * const movieWithIdOnly = await prisma.movie.createManyAndReturn({
+     * const moviesWithIdOnly = await prisma.movies.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -3633,28 +3633,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends MovieCreateManyAndReturnArgs>(args?: SelectSubset<T, MovieCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends moviesCreateManyAndReturnArgs>(args?: SelectSubset<T, moviesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Movie.
-     * @param {MovieDeleteArgs} args - Arguments to delete one Movie.
+     * Delete a Movies.
+     * @param {moviesDeleteArgs} args - Arguments to delete one Movies.
      * @example
-     * // Delete one Movie
-     * const Movie = await prisma.movie.delete({
+     * // Delete one Movies
+     * const Movies = await prisma.movies.delete({
      *   where: {
-     *     // ... filter to delete one Movie
+     *     // ... filter to delete one Movies
      *   }
      * })
      * 
      */
-    delete<T extends MovieDeleteArgs>(args: SelectSubset<T, MovieDeleteArgs<ExtArgs>>): Prisma__MovieClient<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends moviesDeleteArgs>(args: SelectSubset<T, moviesDeleteArgs<ExtArgs>>): Prisma__moviesClient<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Movie.
-     * @param {MovieUpdateArgs} args - Arguments to update one Movie.
+     * Update one Movies.
+     * @param {moviesUpdateArgs} args - Arguments to update one Movies.
      * @example
-     * // Update one Movie
-     * const movie = await prisma.movie.update({
+     * // Update one Movies
+     * const movies = await prisma.movies.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3664,30 +3664,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends MovieUpdateArgs>(args: SelectSubset<T, MovieUpdateArgs<ExtArgs>>): Prisma__MovieClient<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends moviesUpdateArgs>(args: SelectSubset<T, moviesUpdateArgs<ExtArgs>>): Prisma__moviesClient<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Movies.
-     * @param {MovieDeleteManyArgs} args - Arguments to filter Movies to delete.
+     * @param {moviesDeleteManyArgs} args - Arguments to filter Movies to delete.
      * @example
      * // Delete a few Movies
-     * const { count } = await prisma.movie.deleteMany({
+     * const { count } = await prisma.movies.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends MovieDeleteManyArgs>(args?: SelectSubset<T, MovieDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends moviesDeleteManyArgs>(args?: SelectSubset<T, moviesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Movies.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {moviesUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Movies
-     * const movie = await prisma.movie.updateMany({
+     * const movies = await prisma.movies.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3697,14 +3697,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends MovieUpdateManyArgs>(args: SelectSubset<T, MovieUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends moviesUpdateManyArgs>(args: SelectSubset<T, moviesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Movies and returns the data updated in the database.
-     * @param {MovieUpdateManyAndReturnArgs} args - Arguments to update many Movies.
+     * @param {moviesUpdateManyAndReturnArgs} args - Arguments to update many Movies.
      * @example
      * // Update many Movies
-     * const movie = await prisma.movie.updateManyAndReturn({
+     * const movies = await prisma.movies.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3714,7 +3714,7 @@ export namespace Prisma {
      * })
      * 
      * // Update zero or more Movies and only return the `id`
-     * const movieWithIdOnly = await prisma.movie.updateManyAndReturn({
+     * const moviesWithIdOnly = await prisma.movies.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -3727,56 +3727,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends MovieUpdateManyAndReturnArgs>(args: SelectSubset<T, MovieUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends moviesUpdateManyAndReturnArgs>(args: SelectSubset<T, moviesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Movie.
-     * @param {MovieUpsertArgs} args - Arguments to update or create a Movie.
+     * Create or update one Movies.
+     * @param {moviesUpsertArgs} args - Arguments to update or create a Movies.
      * @example
-     * // Update or create a Movie
-     * const movie = await prisma.movie.upsert({
+     * // Update or create a Movies
+     * const movies = await prisma.movies.upsert({
      *   create: {
-     *     // ... data to create a Movie
+     *     // ... data to create a Movies
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Movie we want to update
+     *     // ... the filter for the Movies we want to update
      *   }
      * })
      */
-    upsert<T extends MovieUpsertArgs>(args: SelectSubset<T, MovieUpsertArgs<ExtArgs>>): Prisma__MovieClient<$Result.GetResult<Prisma.$MoviePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends moviesUpsertArgs>(args: SelectSubset<T, moviesUpsertArgs<ExtArgs>>): Prisma__moviesClient<$Result.GetResult<Prisma.$moviesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Movies.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieCountArgs} args - Arguments to filter Movies to count.
+     * @param {moviesCountArgs} args - Arguments to filter Movies to count.
      * @example
      * // Count the number of Movies
-     * const count = await prisma.movie.count({
+     * const count = await prisma.movies.count({
      *   where: {
      *     // ... the filter for the Movies we want to count
      *   }
      * })
     **/
-    count<T extends MovieCountArgs>(
-      args?: Subset<T, MovieCountArgs>,
+    count<T extends moviesCountArgs>(
+      args?: Subset<T, moviesCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], MovieCountAggregateOutputType>
+          : GetScalarType<T['select'], MoviesCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Movie.
+     * Allows you to perform aggregations operations on a Movies.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {MoviesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -3796,13 +3796,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends MovieAggregateArgs>(args: Subset<T, MovieAggregateArgs>): Prisma.PrismaPromise<GetMovieAggregateType<T>>
+    aggregate<T extends MoviesAggregateArgs>(args: Subset<T, MoviesAggregateArgs>): Prisma.PrismaPromise<GetMoviesAggregateType<T>>
 
     /**
-     * Group by Movie.
+     * Group by Movies.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MovieGroupByArgs} args - Group by arguments.
+     * @param {moviesGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -3817,14 +3817,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends MovieGroupByArgs,
+      T extends moviesGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: MovieGroupByArgs['orderBy'] }
-        : { orderBy?: MovieGroupByArgs['orderBy'] },
+        ? { orderBy: moviesGroupByArgs['orderBy'] }
+        : { orderBy?: moviesGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -3873,23 +3873,23 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, MovieGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMovieGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, moviesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMoviesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Movie model
+   * Fields of the movies model
    */
-  readonly fields: MovieFieldRefs;
+  readonly fields: moviesFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Movie.
+   * The delegate class that acts as a "Promise-like" for movies.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__MovieClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__moviesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    genres<T extends Movie$genresArgs<ExtArgs> = {}>(args?: Subset<T, Movie$genresArgs<ExtArgs>>): Prisma__GenreClient<$Result.GetResult<Prisma.$GenrePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-    languages<T extends Movie$languagesArgs<ExtArgs> = {}>(args?: Subset<T, Movie$languagesArgs<ExtArgs>>): Prisma__LanguageClient<$Result.GetResult<Prisma.$LanguagePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    genres<T extends movies$genresArgs<ExtArgs> = {}>(args?: Subset<T, movies$genresArgs<ExtArgs>>): Prisma__genresClient<$Result.GetResult<Prisma.$genresPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    languages<T extends movies$languagesArgs<ExtArgs> = {}>(args?: Subset<T, movies$languagesArgs<ExtArgs>>): Prisma__languagesClient<$Result.GetResult<Prisma.$languagesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3916,462 +3916,462 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Movie model
+   * Fields of the movies model
    */
-  interface MovieFieldRefs {
-    readonly id: FieldRef<"Movie", 'Int'>
-    readonly movie_name: FieldRef<"Movie", 'String'>
-    readonly movie_language: FieldRef<"Movie", 'Int'>
-    readonly genre_movie: FieldRef<"Movie", 'Int'>
+  interface moviesFieldRefs {
+    readonly id: FieldRef<"movies", 'Int'>
+    readonly movie_name: FieldRef<"movies", 'String'>
+    readonly movie_language: FieldRef<"movies", 'Int'>
+    readonly genre_movie: FieldRef<"movies", 'Int'>
   }
     
 
   // Custom InputTypes
   /**
-   * Movie findUnique
+   * movies findUnique
    */
-  export type MovieFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * Filter, which Movie to fetch.
+     * Filter, which movies to fetch.
      */
-    where: MovieWhereUniqueInput
+    where: moviesWhereUniqueInput
   }
 
   /**
-   * Movie findUniqueOrThrow
+   * movies findUniqueOrThrow
    */
-  export type MovieFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * Filter, which Movie to fetch.
+     * Filter, which movies to fetch.
      */
-    where: MovieWhereUniqueInput
+    where: moviesWhereUniqueInput
   }
 
   /**
-   * Movie findFirst
+   * movies findFirst
    */
-  export type MovieFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * Filter, which Movie to fetch.
+     * Filter, which movies to fetch.
      */
-    where?: MovieWhereInput
+    where?: moviesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Movies to fetch.
+     * Determine the order of movies to fetch.
      */
-    orderBy?: MovieOrderByWithRelationInput | MovieOrderByWithRelationInput[]
+    orderBy?: moviesOrderByWithRelationInput | moviesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Movies.
+     * Sets the position for searching for movies.
      */
-    cursor?: MovieWhereUniqueInput
+    cursor?: moviesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Movies from the position of the cursor.
+     * Take `±n` movies from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Movies.
+     * Skip the first `n` movies.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Movies.
+     * Filter by unique combinations of movies.
      */
-    distinct?: MovieScalarFieldEnum | MovieScalarFieldEnum[]
+    distinct?: MoviesScalarFieldEnum | MoviesScalarFieldEnum[]
   }
 
   /**
-   * Movie findFirstOrThrow
+   * movies findFirstOrThrow
    */
-  export type MovieFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * Filter, which Movie to fetch.
+     * Filter, which movies to fetch.
      */
-    where?: MovieWhereInput
+    where?: moviesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Movies to fetch.
+     * Determine the order of movies to fetch.
      */
-    orderBy?: MovieOrderByWithRelationInput | MovieOrderByWithRelationInput[]
+    orderBy?: moviesOrderByWithRelationInput | moviesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Movies.
+     * Sets the position for searching for movies.
      */
-    cursor?: MovieWhereUniqueInput
+    cursor?: moviesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Movies from the position of the cursor.
+     * Take `±n` movies from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Movies.
+     * Skip the first `n` movies.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Movies.
+     * Filter by unique combinations of movies.
      */
-    distinct?: MovieScalarFieldEnum | MovieScalarFieldEnum[]
+    distinct?: MoviesScalarFieldEnum | MoviesScalarFieldEnum[]
   }
 
   /**
-   * Movie findMany
+   * movies findMany
    */
-  export type MovieFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * Filter, which Movies to fetch.
+     * Filter, which movies to fetch.
      */
-    where?: MovieWhereInput
+    where?: moviesWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Movies to fetch.
+     * Determine the order of movies to fetch.
      */
-    orderBy?: MovieOrderByWithRelationInput | MovieOrderByWithRelationInput[]
+    orderBy?: moviesOrderByWithRelationInput | moviesOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Movies.
+     * Sets the position for listing movies.
      */
-    cursor?: MovieWhereUniqueInput
+    cursor?: moviesWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Movies from the position of the cursor.
+     * Take `±n` movies from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Movies.
+     * Skip the first `n` movies.
      */
     skip?: number
-    distinct?: MovieScalarFieldEnum | MovieScalarFieldEnum[]
+    distinct?: MoviesScalarFieldEnum | MoviesScalarFieldEnum[]
   }
 
   /**
-   * Movie create
+   * movies create
    */
-  export type MovieCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * The data needed to create a Movie.
+     * The data needed to create a movies.
      */
-    data?: XOR<MovieCreateInput, MovieUncheckedCreateInput>
+    data?: XOR<moviesCreateInput, moviesUncheckedCreateInput>
   }
 
   /**
-   * Movie createMany
+   * movies createMany
    */
-  export type MovieCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Movies.
+     * The data used to create many movies.
      */
-    data: MovieCreateManyInput | MovieCreateManyInput[]
+    data: moviesCreateManyInput | moviesCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Movie createManyAndReturn
+   * movies createManyAndReturn
    */
-  export type MovieCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelectCreateManyAndReturn<ExtArgs> | null
+    select?: moviesSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
-     * The data used to create many Movies.
+     * The data used to create many movies.
      */
-    data: MovieCreateManyInput | MovieCreateManyInput[]
+    data: moviesCreateManyInput | moviesCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: moviesIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Movie update
+   * movies update
    */
-  export type MovieUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * The data needed to update a Movie.
+     * The data needed to update a movies.
      */
-    data: XOR<MovieUpdateInput, MovieUncheckedUpdateInput>
+    data: XOR<moviesUpdateInput, moviesUncheckedUpdateInput>
     /**
-     * Choose, which Movie to update.
+     * Choose, which movies to update.
      */
-    where: MovieWhereUniqueInput
+    where: moviesWhereUniqueInput
   }
 
   /**
-   * Movie updateMany
+   * movies updateMany
    */
-  export type MovieUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Movies.
+     * The data used to update movies.
      */
-    data: XOR<MovieUpdateManyMutationInput, MovieUncheckedUpdateManyInput>
+    data: XOR<moviesUpdateManyMutationInput, moviesUncheckedUpdateManyInput>
     /**
-     * Filter which Movies to update
+     * Filter which movies to update
      */
-    where?: MovieWhereInput
+    where?: moviesWhereInput
     /**
-     * Limit how many Movies to update.
+     * Limit how many movies to update.
      */
     limit?: number
   }
 
   /**
-   * Movie updateManyAndReturn
+   * movies updateManyAndReturn
    */
-  export type MovieUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: moviesSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
-     * The data used to update Movies.
+     * The data used to update movies.
      */
-    data: XOR<MovieUpdateManyMutationInput, MovieUncheckedUpdateManyInput>
+    data: XOR<moviesUpdateManyMutationInput, moviesUncheckedUpdateManyInput>
     /**
-     * Filter which Movies to update
+     * Filter which movies to update
      */
-    where?: MovieWhereInput
+    where?: moviesWhereInput
     /**
-     * Limit how many Movies to update.
+     * Limit how many movies to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: moviesIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Movie upsert
+   * movies upsert
    */
-  export type MovieUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * The filter to search for the Movie to update in case it exists.
+     * The filter to search for the movies to update in case it exists.
      */
-    where: MovieWhereUniqueInput
+    where: moviesWhereUniqueInput
     /**
-     * In case the Movie found by the `where` argument doesn't exist, create a new Movie with this data.
+     * In case the movies found by the `where` argument doesn't exist, create a new movies with this data.
      */
-    create: XOR<MovieCreateInput, MovieUncheckedCreateInput>
+    create: XOR<moviesCreateInput, moviesUncheckedCreateInput>
     /**
-     * In case the Movie was found with the provided `where` argument, update it with this data.
+     * In case the movies was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<MovieUpdateInput, MovieUncheckedUpdateInput>
+    update: XOR<moviesUpdateInput, moviesUncheckedUpdateInput>
   }
 
   /**
-   * Movie delete
+   * movies delete
    */
-  export type MovieDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
     /**
-     * Filter which Movie to delete.
+     * Filter which movies to delete.
      */
-    where: MovieWhereUniqueInput
+    where: moviesWhereUniqueInput
   }
 
   /**
-   * Movie deleteMany
+   * movies deleteMany
    */
-  export type MovieDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Movies to delete
+     * Filter which movies to delete
      */
-    where?: MovieWhereInput
+    where?: moviesWhereInput
     /**
-     * Limit how many Movies to delete.
+     * Limit how many movies to delete.
      */
     limit?: number
   }
 
   /**
-   * Movie.genres
+   * movies.genres
    */
-  export type Movie$genresArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type movies$genresArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Genre
+     * Select specific fields to fetch from the genres
      */
-    select?: GenreSelect<ExtArgs> | null
+    select?: genresSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Genre
+     * Omit specific fields from the genres
      */
-    omit?: GenreOmit<ExtArgs> | null
+    omit?: genresOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: GenreInclude<ExtArgs> | null
-    where?: GenreWhereInput
+    include?: genresInclude<ExtArgs> | null
+    where?: genresWhereInput
   }
 
   /**
-   * Movie.languages
+   * movies.languages
    */
-  export type Movie$languagesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type movies$languagesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Language
+     * Select specific fields to fetch from the languages
      */
-    select?: LanguageSelect<ExtArgs> | null
+    select?: languagesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Language
+     * Omit specific fields from the languages
      */
-    omit?: LanguageOmit<ExtArgs> | null
+    omit?: languagesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: LanguageInclude<ExtArgs> | null
-    where?: LanguageWhereInput
+    include?: languagesInclude<ExtArgs> | null
+    where?: languagesWhereInput
   }
 
   /**
-   * Movie without action
+   * movies without action
    */
-  export type MovieDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type moviesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Movie
+     * Select specific fields to fetch from the movies
      */
-    select?: MovieSelect<ExtArgs> | null
+    select?: moviesSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Movie
+     * Omit specific fields from the movies
      */
-    omit?: MovieOmit<ExtArgs> | null
+    omit?: moviesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: MovieInclude<ExtArgs> | null
+    include?: moviesInclude<ExtArgs> | null
   }
 
 
@@ -4389,30 +4389,30 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const GenreScalarFieldEnum: {
+  export const GenresScalarFieldEnum: {
     id: 'id',
     genre_name: 'genre_name'
   };
 
-  export type GenreScalarFieldEnum = (typeof GenreScalarFieldEnum)[keyof typeof GenreScalarFieldEnum]
+  export type GenresScalarFieldEnum = (typeof GenresScalarFieldEnum)[keyof typeof GenresScalarFieldEnum]
 
 
-  export const LanguageScalarFieldEnum: {
+  export const LanguagesScalarFieldEnum: {
     id: 'id',
     language_name: 'language_name'
   };
 
-  export type LanguageScalarFieldEnum = (typeof LanguageScalarFieldEnum)[keyof typeof LanguageScalarFieldEnum]
+  export type LanguagesScalarFieldEnum = (typeof LanguagesScalarFieldEnum)[keyof typeof LanguagesScalarFieldEnum]
 
 
-  export const MovieScalarFieldEnum: {
+  export const MoviesScalarFieldEnum: {
     id: 'id',
     movie_name: 'movie_name',
     movie_language: 'movie_language',
     genre_movie: 'genre_movie'
   };
 
-  export type MovieScalarFieldEnum = (typeof MovieScalarFieldEnum)[keyof typeof MovieScalarFieldEnum]
+  export type MoviesScalarFieldEnum = (typeof MoviesScalarFieldEnum)[keyof typeof MoviesScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -4489,255 +4489,255 @@ export namespace Prisma {
    */
 
 
-  export type GenreWhereInput = {
-    AND?: GenreWhereInput | GenreWhereInput[]
-    OR?: GenreWhereInput[]
-    NOT?: GenreWhereInput | GenreWhereInput[]
-    id?: IntFilter<"Genre"> | number
-    genre_name?: StringNullableFilter<"Genre"> | string | null
-    movies?: MovieListRelationFilter
+  export type genresWhereInput = {
+    AND?: genresWhereInput | genresWhereInput[]
+    OR?: genresWhereInput[]
+    NOT?: genresWhereInput | genresWhereInput[]
+    id?: IntFilter<"genres"> | number
+    genre_name?: StringNullableFilter<"genres"> | string | null
+    movies?: MoviesListRelationFilter
   }
 
-  export type GenreOrderByWithRelationInput = {
+  export type genresOrderByWithRelationInput = {
     id?: SortOrder
     genre_name?: SortOrderInput | SortOrder
-    movies?: MovieOrderByRelationAggregateInput
+    movies?: moviesOrderByRelationAggregateInput
   }
 
-  export type GenreWhereUniqueInput = Prisma.AtLeast<{
+  export type genresWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: GenreWhereInput | GenreWhereInput[]
-    OR?: GenreWhereInput[]
-    NOT?: GenreWhereInput | GenreWhereInput[]
-    genre_name?: StringNullableFilter<"Genre"> | string | null
-    movies?: MovieListRelationFilter
+    AND?: genresWhereInput | genresWhereInput[]
+    OR?: genresWhereInput[]
+    NOT?: genresWhereInput | genresWhereInput[]
+    genre_name?: StringNullableFilter<"genres"> | string | null
+    movies?: MoviesListRelationFilter
   }, "id">
 
-  export type GenreOrderByWithAggregationInput = {
+  export type genresOrderByWithAggregationInput = {
     id?: SortOrder
     genre_name?: SortOrderInput | SortOrder
-    _count?: GenreCountOrderByAggregateInput
-    _avg?: GenreAvgOrderByAggregateInput
-    _max?: GenreMaxOrderByAggregateInput
-    _min?: GenreMinOrderByAggregateInput
-    _sum?: GenreSumOrderByAggregateInput
+    _count?: genresCountOrderByAggregateInput
+    _avg?: genresAvgOrderByAggregateInput
+    _max?: genresMaxOrderByAggregateInput
+    _min?: genresMinOrderByAggregateInput
+    _sum?: genresSumOrderByAggregateInput
   }
 
-  export type GenreScalarWhereWithAggregatesInput = {
-    AND?: GenreScalarWhereWithAggregatesInput | GenreScalarWhereWithAggregatesInput[]
-    OR?: GenreScalarWhereWithAggregatesInput[]
-    NOT?: GenreScalarWhereWithAggregatesInput | GenreScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Genre"> | number
-    genre_name?: StringNullableWithAggregatesFilter<"Genre"> | string | null
+  export type genresScalarWhereWithAggregatesInput = {
+    AND?: genresScalarWhereWithAggregatesInput | genresScalarWhereWithAggregatesInput[]
+    OR?: genresScalarWhereWithAggregatesInput[]
+    NOT?: genresScalarWhereWithAggregatesInput | genresScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"genres"> | number
+    genre_name?: StringNullableWithAggregatesFilter<"genres"> | string | null
   }
 
-  export type LanguageWhereInput = {
-    AND?: LanguageWhereInput | LanguageWhereInput[]
-    OR?: LanguageWhereInput[]
-    NOT?: LanguageWhereInput | LanguageWhereInput[]
-    id?: IntFilter<"Language"> | number
-    language_name?: StringNullableFilter<"Language"> | string | null
-    movies?: MovieListRelationFilter
+  export type languagesWhereInput = {
+    AND?: languagesWhereInput | languagesWhereInput[]
+    OR?: languagesWhereInput[]
+    NOT?: languagesWhereInput | languagesWhereInput[]
+    id?: IntFilter<"languages"> | number
+    language_name?: StringNullableFilter<"languages"> | string | null
+    movies?: MoviesListRelationFilter
   }
 
-  export type LanguageOrderByWithRelationInput = {
+  export type languagesOrderByWithRelationInput = {
     id?: SortOrder
     language_name?: SortOrderInput | SortOrder
-    movies?: MovieOrderByRelationAggregateInput
+    movies?: moviesOrderByRelationAggregateInput
   }
 
-  export type LanguageWhereUniqueInput = Prisma.AtLeast<{
+  export type languagesWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: LanguageWhereInput | LanguageWhereInput[]
-    OR?: LanguageWhereInput[]
-    NOT?: LanguageWhereInput | LanguageWhereInput[]
-    language_name?: StringNullableFilter<"Language"> | string | null
-    movies?: MovieListRelationFilter
+    AND?: languagesWhereInput | languagesWhereInput[]
+    OR?: languagesWhereInput[]
+    NOT?: languagesWhereInput | languagesWhereInput[]
+    language_name?: StringNullableFilter<"languages"> | string | null
+    movies?: MoviesListRelationFilter
   }, "id">
 
-  export type LanguageOrderByWithAggregationInput = {
+  export type languagesOrderByWithAggregationInput = {
     id?: SortOrder
     language_name?: SortOrderInput | SortOrder
-    _count?: LanguageCountOrderByAggregateInput
-    _avg?: LanguageAvgOrderByAggregateInput
-    _max?: LanguageMaxOrderByAggregateInput
-    _min?: LanguageMinOrderByAggregateInput
-    _sum?: LanguageSumOrderByAggregateInput
+    _count?: languagesCountOrderByAggregateInput
+    _avg?: languagesAvgOrderByAggregateInput
+    _max?: languagesMaxOrderByAggregateInput
+    _min?: languagesMinOrderByAggregateInput
+    _sum?: languagesSumOrderByAggregateInput
   }
 
-  export type LanguageScalarWhereWithAggregatesInput = {
-    AND?: LanguageScalarWhereWithAggregatesInput | LanguageScalarWhereWithAggregatesInput[]
-    OR?: LanguageScalarWhereWithAggregatesInput[]
-    NOT?: LanguageScalarWhereWithAggregatesInput | LanguageScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Language"> | number
-    language_name?: StringNullableWithAggregatesFilter<"Language"> | string | null
+  export type languagesScalarWhereWithAggregatesInput = {
+    AND?: languagesScalarWhereWithAggregatesInput | languagesScalarWhereWithAggregatesInput[]
+    OR?: languagesScalarWhereWithAggregatesInput[]
+    NOT?: languagesScalarWhereWithAggregatesInput | languagesScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"languages"> | number
+    language_name?: StringNullableWithAggregatesFilter<"languages"> | string | null
   }
 
-  export type MovieWhereInput = {
-    AND?: MovieWhereInput | MovieWhereInput[]
-    OR?: MovieWhereInput[]
-    NOT?: MovieWhereInput | MovieWhereInput[]
-    id?: IntFilter<"Movie"> | number
-    movie_name?: StringNullableFilter<"Movie"> | string | null
-    movie_language?: IntNullableFilter<"Movie"> | number | null
-    genre_movie?: IntNullableFilter<"Movie"> | number | null
-    genres?: XOR<GenreNullableScalarRelationFilter, GenreWhereInput> | null
-    languages?: XOR<LanguageNullableScalarRelationFilter, LanguageWhereInput> | null
+  export type moviesWhereInput = {
+    AND?: moviesWhereInput | moviesWhereInput[]
+    OR?: moviesWhereInput[]
+    NOT?: moviesWhereInput | moviesWhereInput[]
+    id?: IntFilter<"movies"> | number
+    movie_name?: StringNullableFilter<"movies"> | string | null
+    movie_language?: IntNullableFilter<"movies"> | number | null
+    genre_movie?: IntNullableFilter<"movies"> | number | null
+    genres?: XOR<GenresNullableScalarRelationFilter, genresWhereInput> | null
+    languages?: XOR<LanguagesNullableScalarRelationFilter, languagesWhereInput> | null
   }
 
-  export type MovieOrderByWithRelationInput = {
+  export type moviesOrderByWithRelationInput = {
     id?: SortOrder
     movie_name?: SortOrderInput | SortOrder
     movie_language?: SortOrderInput | SortOrder
     genre_movie?: SortOrderInput | SortOrder
-    genres?: GenreOrderByWithRelationInput
-    languages?: LanguageOrderByWithRelationInput
+    genres?: genresOrderByWithRelationInput
+    languages?: languagesOrderByWithRelationInput
   }
 
-  export type MovieWhereUniqueInput = Prisma.AtLeast<{
+  export type moviesWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: MovieWhereInput | MovieWhereInput[]
-    OR?: MovieWhereInput[]
-    NOT?: MovieWhereInput | MovieWhereInput[]
-    movie_name?: StringNullableFilter<"Movie"> | string | null
-    movie_language?: IntNullableFilter<"Movie"> | number | null
-    genre_movie?: IntNullableFilter<"Movie"> | number | null
-    genres?: XOR<GenreNullableScalarRelationFilter, GenreWhereInput> | null
-    languages?: XOR<LanguageNullableScalarRelationFilter, LanguageWhereInput> | null
+    AND?: moviesWhereInput | moviesWhereInput[]
+    OR?: moviesWhereInput[]
+    NOT?: moviesWhereInput | moviesWhereInput[]
+    movie_name?: StringNullableFilter<"movies"> | string | null
+    movie_language?: IntNullableFilter<"movies"> | number | null
+    genre_movie?: IntNullableFilter<"movies"> | number | null
+    genres?: XOR<GenresNullableScalarRelationFilter, genresWhereInput> | null
+    languages?: XOR<LanguagesNullableScalarRelationFilter, languagesWhereInput> | null
   }, "id">
 
-  export type MovieOrderByWithAggregationInput = {
+  export type moviesOrderByWithAggregationInput = {
     id?: SortOrder
     movie_name?: SortOrderInput | SortOrder
     movie_language?: SortOrderInput | SortOrder
     genre_movie?: SortOrderInput | SortOrder
-    _count?: MovieCountOrderByAggregateInput
-    _avg?: MovieAvgOrderByAggregateInput
-    _max?: MovieMaxOrderByAggregateInput
-    _min?: MovieMinOrderByAggregateInput
-    _sum?: MovieSumOrderByAggregateInput
+    _count?: moviesCountOrderByAggregateInput
+    _avg?: moviesAvgOrderByAggregateInput
+    _max?: moviesMaxOrderByAggregateInput
+    _min?: moviesMinOrderByAggregateInput
+    _sum?: moviesSumOrderByAggregateInput
   }
 
-  export type MovieScalarWhereWithAggregatesInput = {
-    AND?: MovieScalarWhereWithAggregatesInput | MovieScalarWhereWithAggregatesInput[]
-    OR?: MovieScalarWhereWithAggregatesInput[]
-    NOT?: MovieScalarWhereWithAggregatesInput | MovieScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Movie"> | number
-    movie_name?: StringNullableWithAggregatesFilter<"Movie"> | string | null
-    movie_language?: IntNullableWithAggregatesFilter<"Movie"> | number | null
-    genre_movie?: IntNullableWithAggregatesFilter<"Movie"> | number | null
+  export type moviesScalarWhereWithAggregatesInput = {
+    AND?: moviesScalarWhereWithAggregatesInput | moviesScalarWhereWithAggregatesInput[]
+    OR?: moviesScalarWhereWithAggregatesInput[]
+    NOT?: moviesScalarWhereWithAggregatesInput | moviesScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"movies"> | number
+    movie_name?: StringNullableWithAggregatesFilter<"movies"> | string | null
+    movie_language?: IntNullableWithAggregatesFilter<"movies"> | number | null
+    genre_movie?: IntNullableWithAggregatesFilter<"movies"> | number | null
   }
 
-  export type GenreCreateInput = {
+  export type genresCreateInput = {
     genre_name?: string | null
-    movies?: MovieCreateNestedManyWithoutGenresInput
+    movies?: moviesCreateNestedManyWithoutGenresInput
   }
 
-  export type GenreUncheckedCreateInput = {
-    id?: number
-    genre_name?: string | null
-    movies?: MovieUncheckedCreateNestedManyWithoutGenresInput
-  }
-
-  export type GenreUpdateInput = {
-    genre_name?: NullableStringFieldUpdateOperationsInput | string | null
-    movies?: MovieUpdateManyWithoutGenresNestedInput
-  }
-
-  export type GenreUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    genre_name?: NullableStringFieldUpdateOperationsInput | string | null
-    movies?: MovieUncheckedUpdateManyWithoutGenresNestedInput
-  }
-
-  export type GenreCreateManyInput = {
+  export type genresUncheckedCreateInput = {
     id?: number
     genre_name?: string | null
+    movies?: moviesUncheckedCreateNestedManyWithoutGenresInput
   }
 
-  export type GenreUpdateManyMutationInput = {
+  export type genresUpdateInput = {
+    genre_name?: NullableStringFieldUpdateOperationsInput | string | null
+    movies?: moviesUpdateManyWithoutGenresNestedInput
+  }
+
+  export type genresUncheckedUpdateInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    genre_name?: NullableStringFieldUpdateOperationsInput | string | null
+    movies?: moviesUncheckedUpdateManyWithoutGenresNestedInput
+  }
+
+  export type genresCreateManyInput = {
+    id?: number
+    genre_name?: string | null
+  }
+
+  export type genresUpdateManyMutationInput = {
     genre_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type GenreUncheckedUpdateManyInput = {
+  export type genresUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     genre_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type LanguageCreateInput = {
+  export type languagesCreateInput = {
     language_name?: string | null
-    movies?: MovieCreateNestedManyWithoutLanguagesInput
+    movies?: moviesCreateNestedManyWithoutLanguagesInput
   }
 
-  export type LanguageUncheckedCreateInput = {
+  export type languagesUncheckedCreateInput = {
     id?: number
     language_name?: string | null
-    movies?: MovieUncheckedCreateNestedManyWithoutLanguagesInput
+    movies?: moviesUncheckedCreateNestedManyWithoutLanguagesInput
   }
 
-  export type LanguageUpdateInput = {
+  export type languagesUpdateInput = {
     language_name?: NullableStringFieldUpdateOperationsInput | string | null
-    movies?: MovieUpdateManyWithoutLanguagesNestedInput
+    movies?: moviesUpdateManyWithoutLanguagesNestedInput
   }
 
-  export type LanguageUncheckedUpdateInput = {
+  export type languagesUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     language_name?: NullableStringFieldUpdateOperationsInput | string | null
-    movies?: MovieUncheckedUpdateManyWithoutLanguagesNestedInput
+    movies?: moviesUncheckedUpdateManyWithoutLanguagesNestedInput
   }
 
-  export type LanguageCreateManyInput = {
+  export type languagesCreateManyInput = {
     id?: number
     language_name?: string | null
   }
 
-  export type LanguageUpdateManyMutationInput = {
+  export type languagesUpdateManyMutationInput = {
     language_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type LanguageUncheckedUpdateManyInput = {
+  export type languagesUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     language_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type MovieCreateInput = {
+  export type moviesCreateInput = {
     movie_name?: string | null
-    genres?: GenreCreateNestedOneWithoutMoviesInput
-    languages?: LanguageCreateNestedOneWithoutMoviesInput
+    genres?: genresCreateNestedOneWithoutMoviesInput
+    languages?: languagesCreateNestedOneWithoutMoviesInput
   }
 
-  export type MovieUncheckedCreateInput = {
+  export type moviesUncheckedCreateInput = {
     id?: number
     movie_name?: string | null
     movie_language?: number | null
     genre_movie?: number | null
   }
 
-  export type MovieUpdateInput = {
+  export type moviesUpdateInput = {
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
-    genres?: GenreUpdateOneWithoutMoviesNestedInput
-    languages?: LanguageUpdateOneWithoutMoviesNestedInput
+    genres?: genresUpdateOneWithoutMoviesNestedInput
+    languages?: languagesUpdateOneWithoutMoviesNestedInput
   }
 
-  export type MovieUncheckedUpdateInput = {
+  export type moviesUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
     movie_language?: NullableIntFieldUpdateOperationsInput | number | null
     genre_movie?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
-  export type MovieCreateManyInput = {
+  export type moviesCreateManyInput = {
     id?: number
     movie_name?: string | null
     movie_language?: number | null
     genre_movie?: number | null
   }
 
-  export type MovieUpdateManyMutationInput = {
+  export type moviesUpdateManyMutationInput = {
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type MovieUncheckedUpdateManyInput = {
+  export type moviesUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
     movie_language?: NullableIntFieldUpdateOperationsInput | number | null
@@ -4770,10 +4770,10 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
-  export type MovieListRelationFilter = {
-    every?: MovieWhereInput
-    some?: MovieWhereInput
-    none?: MovieWhereInput
+  export type MoviesListRelationFilter = {
+    every?: moviesWhereInput
+    some?: moviesWhereInput
+    none?: moviesWhereInput
   }
 
   export type SortOrderInput = {
@@ -4781,30 +4781,30 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type MovieOrderByRelationAggregateInput = {
+  export type moviesOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type GenreCountOrderByAggregateInput = {
+  export type genresCountOrderByAggregateInput = {
     id?: SortOrder
     genre_name?: SortOrder
   }
 
-  export type GenreAvgOrderByAggregateInput = {
+  export type genresAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type GenreMaxOrderByAggregateInput = {
-    id?: SortOrder
-    genre_name?: SortOrder
-  }
-
-  export type GenreMinOrderByAggregateInput = {
+  export type genresMaxOrderByAggregateInput = {
     id?: SortOrder
     genre_name?: SortOrder
   }
 
-  export type GenreSumOrderByAggregateInput = {
+  export type genresMinOrderByAggregateInput = {
+    id?: SortOrder
+    genre_name?: SortOrder
+  }
+
+  export type genresSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -4842,26 +4842,26 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
-  export type LanguageCountOrderByAggregateInput = {
+  export type languagesCountOrderByAggregateInput = {
     id?: SortOrder
     language_name?: SortOrder
   }
 
-  export type LanguageAvgOrderByAggregateInput = {
+  export type languagesAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type LanguageMaxOrderByAggregateInput = {
-    id?: SortOrder
-    language_name?: SortOrder
-  }
-
-  export type LanguageMinOrderByAggregateInput = {
+  export type languagesMaxOrderByAggregateInput = {
     id?: SortOrder
     language_name?: SortOrder
   }
 
-  export type LanguageSumOrderByAggregateInput = {
+  export type languagesMinOrderByAggregateInput = {
+    id?: SortOrder
+    language_name?: SortOrder
+  }
+
+  export type languagesSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -4876,44 +4876,44 @@ export namespace Prisma {
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
-  export type GenreNullableScalarRelationFilter = {
-    is?: GenreWhereInput | null
-    isNot?: GenreWhereInput | null
+  export type GenresNullableScalarRelationFilter = {
+    is?: genresWhereInput | null
+    isNot?: genresWhereInput | null
   }
 
-  export type LanguageNullableScalarRelationFilter = {
-    is?: LanguageWhereInput | null
-    isNot?: LanguageWhereInput | null
+  export type LanguagesNullableScalarRelationFilter = {
+    is?: languagesWhereInput | null
+    isNot?: languagesWhereInput | null
   }
 
-  export type MovieCountOrderByAggregateInput = {
+  export type moviesCountOrderByAggregateInput = {
     id?: SortOrder
     movie_name?: SortOrder
     movie_language?: SortOrder
     genre_movie?: SortOrder
   }
 
-  export type MovieAvgOrderByAggregateInput = {
+  export type moviesAvgOrderByAggregateInput = {
     id?: SortOrder
     movie_language?: SortOrder
     genre_movie?: SortOrder
   }
 
-  export type MovieMaxOrderByAggregateInput = {
-    id?: SortOrder
-    movie_name?: SortOrder
-    movie_language?: SortOrder
-    genre_movie?: SortOrder
-  }
-
-  export type MovieMinOrderByAggregateInput = {
+  export type moviesMaxOrderByAggregateInput = {
     id?: SortOrder
     movie_name?: SortOrder
     movie_language?: SortOrder
     genre_movie?: SortOrder
   }
 
-  export type MovieSumOrderByAggregateInput = {
+  export type moviesMinOrderByAggregateInput = {
+    id?: SortOrder
+    movie_name?: SortOrder
+    movie_language?: SortOrder
+    genre_movie?: SortOrder
+  }
+
+  export type moviesSumOrderByAggregateInput = {
     id?: SortOrder
     movie_language?: SortOrder
     genre_movie?: SortOrder
@@ -4935,36 +4935,36 @@ export namespace Prisma {
     _max?: NestedIntNullableFilter<$PrismaModel>
   }
 
-  export type MovieCreateNestedManyWithoutGenresInput = {
-    create?: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput> | MovieCreateWithoutGenresInput[] | MovieUncheckedCreateWithoutGenresInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutGenresInput | MovieCreateOrConnectWithoutGenresInput[]
-    createMany?: MovieCreateManyGenresInputEnvelope
-    connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
+  export type moviesCreateNestedManyWithoutGenresInput = {
+    create?: XOR<moviesCreateWithoutGenresInput, moviesUncheckedCreateWithoutGenresInput> | moviesCreateWithoutGenresInput[] | moviesUncheckedCreateWithoutGenresInput[]
+    connectOrCreate?: moviesCreateOrConnectWithoutGenresInput | moviesCreateOrConnectWithoutGenresInput[]
+    createMany?: moviesCreateManyGenresInputEnvelope
+    connect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
   }
 
-  export type MovieUncheckedCreateNestedManyWithoutGenresInput = {
-    create?: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput> | MovieCreateWithoutGenresInput[] | MovieUncheckedCreateWithoutGenresInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutGenresInput | MovieCreateOrConnectWithoutGenresInput[]
-    createMany?: MovieCreateManyGenresInputEnvelope
-    connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
+  export type moviesUncheckedCreateNestedManyWithoutGenresInput = {
+    create?: XOR<moviesCreateWithoutGenresInput, moviesUncheckedCreateWithoutGenresInput> | moviesCreateWithoutGenresInput[] | moviesUncheckedCreateWithoutGenresInput[]
+    connectOrCreate?: moviesCreateOrConnectWithoutGenresInput | moviesCreateOrConnectWithoutGenresInput[]
+    createMany?: moviesCreateManyGenresInputEnvelope
+    connect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
   }
 
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
   }
 
-  export type MovieUpdateManyWithoutGenresNestedInput = {
-    create?: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput> | MovieCreateWithoutGenresInput[] | MovieUncheckedCreateWithoutGenresInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutGenresInput | MovieCreateOrConnectWithoutGenresInput[]
-    upsert?: MovieUpsertWithWhereUniqueWithoutGenresInput | MovieUpsertWithWhereUniqueWithoutGenresInput[]
-    createMany?: MovieCreateManyGenresInputEnvelope
-    set?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    disconnect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    delete?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    update?: MovieUpdateWithWhereUniqueWithoutGenresInput | MovieUpdateWithWhereUniqueWithoutGenresInput[]
-    updateMany?: MovieUpdateManyWithWhereWithoutGenresInput | MovieUpdateManyWithWhereWithoutGenresInput[]
-    deleteMany?: MovieScalarWhereInput | MovieScalarWhereInput[]
+  export type moviesUpdateManyWithoutGenresNestedInput = {
+    create?: XOR<moviesCreateWithoutGenresInput, moviesUncheckedCreateWithoutGenresInput> | moviesCreateWithoutGenresInput[] | moviesUncheckedCreateWithoutGenresInput[]
+    connectOrCreate?: moviesCreateOrConnectWithoutGenresInput | moviesCreateOrConnectWithoutGenresInput[]
+    upsert?: moviesUpsertWithWhereUniqueWithoutGenresInput | moviesUpsertWithWhereUniqueWithoutGenresInput[]
+    createMany?: moviesCreateManyGenresInputEnvelope
+    set?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    disconnect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    delete?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    connect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    update?: moviesUpdateWithWhereUniqueWithoutGenresInput | moviesUpdateWithWhereUniqueWithoutGenresInput[]
+    updateMany?: moviesUpdateManyWithWhereWithoutGenresInput | moviesUpdateManyWithWhereWithoutGenresInput[]
+    deleteMany?: moviesScalarWhereInput | moviesScalarWhereInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -4975,92 +4975,92 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type MovieUncheckedUpdateManyWithoutGenresNestedInput = {
-    create?: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput> | MovieCreateWithoutGenresInput[] | MovieUncheckedCreateWithoutGenresInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutGenresInput | MovieCreateOrConnectWithoutGenresInput[]
-    upsert?: MovieUpsertWithWhereUniqueWithoutGenresInput | MovieUpsertWithWhereUniqueWithoutGenresInput[]
-    createMany?: MovieCreateManyGenresInputEnvelope
-    set?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    disconnect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    delete?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    update?: MovieUpdateWithWhereUniqueWithoutGenresInput | MovieUpdateWithWhereUniqueWithoutGenresInput[]
-    updateMany?: MovieUpdateManyWithWhereWithoutGenresInput | MovieUpdateManyWithWhereWithoutGenresInput[]
-    deleteMany?: MovieScalarWhereInput | MovieScalarWhereInput[]
+  export type moviesUncheckedUpdateManyWithoutGenresNestedInput = {
+    create?: XOR<moviesCreateWithoutGenresInput, moviesUncheckedCreateWithoutGenresInput> | moviesCreateWithoutGenresInput[] | moviesUncheckedCreateWithoutGenresInput[]
+    connectOrCreate?: moviesCreateOrConnectWithoutGenresInput | moviesCreateOrConnectWithoutGenresInput[]
+    upsert?: moviesUpsertWithWhereUniqueWithoutGenresInput | moviesUpsertWithWhereUniqueWithoutGenresInput[]
+    createMany?: moviesCreateManyGenresInputEnvelope
+    set?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    disconnect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    delete?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    connect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    update?: moviesUpdateWithWhereUniqueWithoutGenresInput | moviesUpdateWithWhereUniqueWithoutGenresInput[]
+    updateMany?: moviesUpdateManyWithWhereWithoutGenresInput | moviesUpdateManyWithWhereWithoutGenresInput[]
+    deleteMany?: moviesScalarWhereInput | moviesScalarWhereInput[]
   }
 
-  export type MovieCreateNestedManyWithoutLanguagesInput = {
-    create?: XOR<MovieCreateWithoutLanguagesInput, MovieUncheckedCreateWithoutLanguagesInput> | MovieCreateWithoutLanguagesInput[] | MovieUncheckedCreateWithoutLanguagesInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutLanguagesInput | MovieCreateOrConnectWithoutLanguagesInput[]
-    createMany?: MovieCreateManyLanguagesInputEnvelope
-    connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
+  export type moviesCreateNestedManyWithoutLanguagesInput = {
+    create?: XOR<moviesCreateWithoutLanguagesInput, moviesUncheckedCreateWithoutLanguagesInput> | moviesCreateWithoutLanguagesInput[] | moviesUncheckedCreateWithoutLanguagesInput[]
+    connectOrCreate?: moviesCreateOrConnectWithoutLanguagesInput | moviesCreateOrConnectWithoutLanguagesInput[]
+    createMany?: moviesCreateManyLanguagesInputEnvelope
+    connect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
   }
 
-  export type MovieUncheckedCreateNestedManyWithoutLanguagesInput = {
-    create?: XOR<MovieCreateWithoutLanguagesInput, MovieUncheckedCreateWithoutLanguagesInput> | MovieCreateWithoutLanguagesInput[] | MovieUncheckedCreateWithoutLanguagesInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutLanguagesInput | MovieCreateOrConnectWithoutLanguagesInput[]
-    createMany?: MovieCreateManyLanguagesInputEnvelope
-    connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
+  export type moviesUncheckedCreateNestedManyWithoutLanguagesInput = {
+    create?: XOR<moviesCreateWithoutLanguagesInput, moviesUncheckedCreateWithoutLanguagesInput> | moviesCreateWithoutLanguagesInput[] | moviesUncheckedCreateWithoutLanguagesInput[]
+    connectOrCreate?: moviesCreateOrConnectWithoutLanguagesInput | moviesCreateOrConnectWithoutLanguagesInput[]
+    createMany?: moviesCreateManyLanguagesInputEnvelope
+    connect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
   }
 
-  export type MovieUpdateManyWithoutLanguagesNestedInput = {
-    create?: XOR<MovieCreateWithoutLanguagesInput, MovieUncheckedCreateWithoutLanguagesInput> | MovieCreateWithoutLanguagesInput[] | MovieUncheckedCreateWithoutLanguagesInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutLanguagesInput | MovieCreateOrConnectWithoutLanguagesInput[]
-    upsert?: MovieUpsertWithWhereUniqueWithoutLanguagesInput | MovieUpsertWithWhereUniqueWithoutLanguagesInput[]
-    createMany?: MovieCreateManyLanguagesInputEnvelope
-    set?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    disconnect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    delete?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    update?: MovieUpdateWithWhereUniqueWithoutLanguagesInput | MovieUpdateWithWhereUniqueWithoutLanguagesInput[]
-    updateMany?: MovieUpdateManyWithWhereWithoutLanguagesInput | MovieUpdateManyWithWhereWithoutLanguagesInput[]
-    deleteMany?: MovieScalarWhereInput | MovieScalarWhereInput[]
+  export type moviesUpdateManyWithoutLanguagesNestedInput = {
+    create?: XOR<moviesCreateWithoutLanguagesInput, moviesUncheckedCreateWithoutLanguagesInput> | moviesCreateWithoutLanguagesInput[] | moviesUncheckedCreateWithoutLanguagesInput[]
+    connectOrCreate?: moviesCreateOrConnectWithoutLanguagesInput | moviesCreateOrConnectWithoutLanguagesInput[]
+    upsert?: moviesUpsertWithWhereUniqueWithoutLanguagesInput | moviesUpsertWithWhereUniqueWithoutLanguagesInput[]
+    createMany?: moviesCreateManyLanguagesInputEnvelope
+    set?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    disconnect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    delete?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    connect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    update?: moviesUpdateWithWhereUniqueWithoutLanguagesInput | moviesUpdateWithWhereUniqueWithoutLanguagesInput[]
+    updateMany?: moviesUpdateManyWithWhereWithoutLanguagesInput | moviesUpdateManyWithWhereWithoutLanguagesInput[]
+    deleteMany?: moviesScalarWhereInput | moviesScalarWhereInput[]
   }
 
-  export type MovieUncheckedUpdateManyWithoutLanguagesNestedInput = {
-    create?: XOR<MovieCreateWithoutLanguagesInput, MovieUncheckedCreateWithoutLanguagesInput> | MovieCreateWithoutLanguagesInput[] | MovieUncheckedCreateWithoutLanguagesInput[]
-    connectOrCreate?: MovieCreateOrConnectWithoutLanguagesInput | MovieCreateOrConnectWithoutLanguagesInput[]
-    upsert?: MovieUpsertWithWhereUniqueWithoutLanguagesInput | MovieUpsertWithWhereUniqueWithoutLanguagesInput[]
-    createMany?: MovieCreateManyLanguagesInputEnvelope
-    set?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    disconnect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    delete?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    connect?: MovieWhereUniqueInput | MovieWhereUniqueInput[]
-    update?: MovieUpdateWithWhereUniqueWithoutLanguagesInput | MovieUpdateWithWhereUniqueWithoutLanguagesInput[]
-    updateMany?: MovieUpdateManyWithWhereWithoutLanguagesInput | MovieUpdateManyWithWhereWithoutLanguagesInput[]
-    deleteMany?: MovieScalarWhereInput | MovieScalarWhereInput[]
+  export type moviesUncheckedUpdateManyWithoutLanguagesNestedInput = {
+    create?: XOR<moviesCreateWithoutLanguagesInput, moviesUncheckedCreateWithoutLanguagesInput> | moviesCreateWithoutLanguagesInput[] | moviesUncheckedCreateWithoutLanguagesInput[]
+    connectOrCreate?: moviesCreateOrConnectWithoutLanguagesInput | moviesCreateOrConnectWithoutLanguagesInput[]
+    upsert?: moviesUpsertWithWhereUniqueWithoutLanguagesInput | moviesUpsertWithWhereUniqueWithoutLanguagesInput[]
+    createMany?: moviesCreateManyLanguagesInputEnvelope
+    set?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    disconnect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    delete?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    connect?: moviesWhereUniqueInput | moviesWhereUniqueInput[]
+    update?: moviesUpdateWithWhereUniqueWithoutLanguagesInput | moviesUpdateWithWhereUniqueWithoutLanguagesInput[]
+    updateMany?: moviesUpdateManyWithWhereWithoutLanguagesInput | moviesUpdateManyWithWhereWithoutLanguagesInput[]
+    deleteMany?: moviesScalarWhereInput | moviesScalarWhereInput[]
   }
 
-  export type GenreCreateNestedOneWithoutMoviesInput = {
-    create?: XOR<GenreCreateWithoutMoviesInput, GenreUncheckedCreateWithoutMoviesInput>
-    connectOrCreate?: GenreCreateOrConnectWithoutMoviesInput
-    connect?: GenreWhereUniqueInput
+  export type genresCreateNestedOneWithoutMoviesInput = {
+    create?: XOR<genresCreateWithoutMoviesInput, genresUncheckedCreateWithoutMoviesInput>
+    connectOrCreate?: genresCreateOrConnectWithoutMoviesInput
+    connect?: genresWhereUniqueInput
   }
 
-  export type LanguageCreateNestedOneWithoutMoviesInput = {
-    create?: XOR<LanguageCreateWithoutMoviesInput, LanguageUncheckedCreateWithoutMoviesInput>
-    connectOrCreate?: LanguageCreateOrConnectWithoutMoviesInput
-    connect?: LanguageWhereUniqueInput
+  export type languagesCreateNestedOneWithoutMoviesInput = {
+    create?: XOR<languagesCreateWithoutMoviesInput, languagesUncheckedCreateWithoutMoviesInput>
+    connectOrCreate?: languagesCreateOrConnectWithoutMoviesInput
+    connect?: languagesWhereUniqueInput
   }
 
-  export type GenreUpdateOneWithoutMoviesNestedInput = {
-    create?: XOR<GenreCreateWithoutMoviesInput, GenreUncheckedCreateWithoutMoviesInput>
-    connectOrCreate?: GenreCreateOrConnectWithoutMoviesInput
-    upsert?: GenreUpsertWithoutMoviesInput
-    disconnect?: GenreWhereInput | boolean
-    delete?: GenreWhereInput | boolean
-    connect?: GenreWhereUniqueInput
-    update?: XOR<XOR<GenreUpdateToOneWithWhereWithoutMoviesInput, GenreUpdateWithoutMoviesInput>, GenreUncheckedUpdateWithoutMoviesInput>
+  export type genresUpdateOneWithoutMoviesNestedInput = {
+    create?: XOR<genresCreateWithoutMoviesInput, genresUncheckedCreateWithoutMoviesInput>
+    connectOrCreate?: genresCreateOrConnectWithoutMoviesInput
+    upsert?: genresUpsertWithoutMoviesInput
+    disconnect?: genresWhereInput | boolean
+    delete?: genresWhereInput | boolean
+    connect?: genresWhereUniqueInput
+    update?: XOR<XOR<genresUpdateToOneWithWhereWithoutMoviesInput, genresUpdateWithoutMoviesInput>, genresUncheckedUpdateWithoutMoviesInput>
   }
 
-  export type LanguageUpdateOneWithoutMoviesNestedInput = {
-    create?: XOR<LanguageCreateWithoutMoviesInput, LanguageUncheckedCreateWithoutMoviesInput>
-    connectOrCreate?: LanguageCreateOrConnectWithoutMoviesInput
-    upsert?: LanguageUpsertWithoutMoviesInput
-    disconnect?: LanguageWhereInput | boolean
-    delete?: LanguageWhereInput | boolean
-    connect?: LanguageWhereUniqueInput
-    update?: XOR<XOR<LanguageUpdateToOneWithWhereWithoutMoviesInput, LanguageUpdateWithoutMoviesInput>, LanguageUncheckedUpdateWithoutMoviesInput>
+  export type languagesUpdateOneWithoutMoviesNestedInput = {
+    create?: XOR<languagesCreateWithoutMoviesInput, languagesUncheckedCreateWithoutMoviesInput>
+    connectOrCreate?: languagesCreateOrConnectWithoutMoviesInput
+    upsert?: languagesUpsertWithoutMoviesInput
+    disconnect?: languagesWhereInput | boolean
+    delete?: languagesWhereInput | boolean
+    connect?: languagesWhereUniqueInput
+    update?: XOR<XOR<languagesUpdateToOneWithWhereWithoutMoviesInput, languagesUpdateWithoutMoviesInput>, languagesUncheckedUpdateWithoutMoviesInput>
   }
 
   export type NullableIntFieldUpdateOperationsInput = {
@@ -5178,199 +5178,199 @@ export namespace Prisma {
     not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
-  export type MovieCreateWithoutGenresInput = {
+  export type moviesCreateWithoutGenresInput = {
     movie_name?: string | null
-    languages?: LanguageCreateNestedOneWithoutMoviesInput
+    languages?: languagesCreateNestedOneWithoutMoviesInput
   }
 
-  export type MovieUncheckedCreateWithoutGenresInput = {
+  export type moviesUncheckedCreateWithoutGenresInput = {
     id?: number
     movie_name?: string | null
     movie_language?: number | null
   }
 
-  export type MovieCreateOrConnectWithoutGenresInput = {
-    where: MovieWhereUniqueInput
-    create: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput>
+  export type moviesCreateOrConnectWithoutGenresInput = {
+    where: moviesWhereUniqueInput
+    create: XOR<moviesCreateWithoutGenresInput, moviesUncheckedCreateWithoutGenresInput>
   }
 
-  export type MovieCreateManyGenresInputEnvelope = {
-    data: MovieCreateManyGenresInput | MovieCreateManyGenresInput[]
+  export type moviesCreateManyGenresInputEnvelope = {
+    data: moviesCreateManyGenresInput | moviesCreateManyGenresInput[]
     skipDuplicates?: boolean
   }
 
-  export type MovieUpsertWithWhereUniqueWithoutGenresInput = {
-    where: MovieWhereUniqueInput
-    update: XOR<MovieUpdateWithoutGenresInput, MovieUncheckedUpdateWithoutGenresInput>
-    create: XOR<MovieCreateWithoutGenresInput, MovieUncheckedCreateWithoutGenresInput>
+  export type moviesUpsertWithWhereUniqueWithoutGenresInput = {
+    where: moviesWhereUniqueInput
+    update: XOR<moviesUpdateWithoutGenresInput, moviesUncheckedUpdateWithoutGenresInput>
+    create: XOR<moviesCreateWithoutGenresInput, moviesUncheckedCreateWithoutGenresInput>
   }
 
-  export type MovieUpdateWithWhereUniqueWithoutGenresInput = {
-    where: MovieWhereUniqueInput
-    data: XOR<MovieUpdateWithoutGenresInput, MovieUncheckedUpdateWithoutGenresInput>
+  export type moviesUpdateWithWhereUniqueWithoutGenresInput = {
+    where: moviesWhereUniqueInput
+    data: XOR<moviesUpdateWithoutGenresInput, moviesUncheckedUpdateWithoutGenresInput>
   }
 
-  export type MovieUpdateManyWithWhereWithoutGenresInput = {
-    where: MovieScalarWhereInput
-    data: XOR<MovieUpdateManyMutationInput, MovieUncheckedUpdateManyWithoutGenresInput>
+  export type moviesUpdateManyWithWhereWithoutGenresInput = {
+    where: moviesScalarWhereInput
+    data: XOR<moviesUpdateManyMutationInput, moviesUncheckedUpdateManyWithoutGenresInput>
   }
 
-  export type MovieScalarWhereInput = {
-    AND?: MovieScalarWhereInput | MovieScalarWhereInput[]
-    OR?: MovieScalarWhereInput[]
-    NOT?: MovieScalarWhereInput | MovieScalarWhereInput[]
-    id?: IntFilter<"Movie"> | number
-    movie_name?: StringNullableFilter<"Movie"> | string | null
-    movie_language?: IntNullableFilter<"Movie"> | number | null
-    genre_movie?: IntNullableFilter<"Movie"> | number | null
+  export type moviesScalarWhereInput = {
+    AND?: moviesScalarWhereInput | moviesScalarWhereInput[]
+    OR?: moviesScalarWhereInput[]
+    NOT?: moviesScalarWhereInput | moviesScalarWhereInput[]
+    id?: IntFilter<"movies"> | number
+    movie_name?: StringNullableFilter<"movies"> | string | null
+    movie_language?: IntNullableFilter<"movies"> | number | null
+    genre_movie?: IntNullableFilter<"movies"> | number | null
   }
 
-  export type MovieCreateWithoutLanguagesInput = {
+  export type moviesCreateWithoutLanguagesInput = {
     movie_name?: string | null
-    genres?: GenreCreateNestedOneWithoutMoviesInput
+    genres?: genresCreateNestedOneWithoutMoviesInput
   }
 
-  export type MovieUncheckedCreateWithoutLanguagesInput = {
+  export type moviesUncheckedCreateWithoutLanguagesInput = {
     id?: number
     movie_name?: string | null
     genre_movie?: number | null
   }
 
-  export type MovieCreateOrConnectWithoutLanguagesInput = {
-    where: MovieWhereUniqueInput
-    create: XOR<MovieCreateWithoutLanguagesInput, MovieUncheckedCreateWithoutLanguagesInput>
+  export type moviesCreateOrConnectWithoutLanguagesInput = {
+    where: moviesWhereUniqueInput
+    create: XOR<moviesCreateWithoutLanguagesInput, moviesUncheckedCreateWithoutLanguagesInput>
   }
 
-  export type MovieCreateManyLanguagesInputEnvelope = {
-    data: MovieCreateManyLanguagesInput | MovieCreateManyLanguagesInput[]
+  export type moviesCreateManyLanguagesInputEnvelope = {
+    data: moviesCreateManyLanguagesInput | moviesCreateManyLanguagesInput[]
     skipDuplicates?: boolean
   }
 
-  export type MovieUpsertWithWhereUniqueWithoutLanguagesInput = {
-    where: MovieWhereUniqueInput
-    update: XOR<MovieUpdateWithoutLanguagesInput, MovieUncheckedUpdateWithoutLanguagesInput>
-    create: XOR<MovieCreateWithoutLanguagesInput, MovieUncheckedCreateWithoutLanguagesInput>
+  export type moviesUpsertWithWhereUniqueWithoutLanguagesInput = {
+    where: moviesWhereUniqueInput
+    update: XOR<moviesUpdateWithoutLanguagesInput, moviesUncheckedUpdateWithoutLanguagesInput>
+    create: XOR<moviesCreateWithoutLanguagesInput, moviesUncheckedCreateWithoutLanguagesInput>
   }
 
-  export type MovieUpdateWithWhereUniqueWithoutLanguagesInput = {
-    where: MovieWhereUniqueInput
-    data: XOR<MovieUpdateWithoutLanguagesInput, MovieUncheckedUpdateWithoutLanguagesInput>
+  export type moviesUpdateWithWhereUniqueWithoutLanguagesInput = {
+    where: moviesWhereUniqueInput
+    data: XOR<moviesUpdateWithoutLanguagesInput, moviesUncheckedUpdateWithoutLanguagesInput>
   }
 
-  export type MovieUpdateManyWithWhereWithoutLanguagesInput = {
-    where: MovieScalarWhereInput
-    data: XOR<MovieUpdateManyMutationInput, MovieUncheckedUpdateManyWithoutLanguagesInput>
+  export type moviesUpdateManyWithWhereWithoutLanguagesInput = {
+    where: moviesScalarWhereInput
+    data: XOR<moviesUpdateManyMutationInput, moviesUncheckedUpdateManyWithoutLanguagesInput>
   }
 
-  export type GenreCreateWithoutMoviesInput = {
+  export type genresCreateWithoutMoviesInput = {
     genre_name?: string | null
   }
 
-  export type GenreUncheckedCreateWithoutMoviesInput = {
+  export type genresUncheckedCreateWithoutMoviesInput = {
     id?: number
     genre_name?: string | null
   }
 
-  export type GenreCreateOrConnectWithoutMoviesInput = {
-    where: GenreWhereUniqueInput
-    create: XOR<GenreCreateWithoutMoviesInput, GenreUncheckedCreateWithoutMoviesInput>
+  export type genresCreateOrConnectWithoutMoviesInput = {
+    where: genresWhereUniqueInput
+    create: XOR<genresCreateWithoutMoviesInput, genresUncheckedCreateWithoutMoviesInput>
   }
 
-  export type LanguageCreateWithoutMoviesInput = {
+  export type languagesCreateWithoutMoviesInput = {
     language_name?: string | null
   }
 
-  export type LanguageUncheckedCreateWithoutMoviesInput = {
+  export type languagesUncheckedCreateWithoutMoviesInput = {
     id?: number
     language_name?: string | null
   }
 
-  export type LanguageCreateOrConnectWithoutMoviesInput = {
-    where: LanguageWhereUniqueInput
-    create: XOR<LanguageCreateWithoutMoviesInput, LanguageUncheckedCreateWithoutMoviesInput>
+  export type languagesCreateOrConnectWithoutMoviesInput = {
+    where: languagesWhereUniqueInput
+    create: XOR<languagesCreateWithoutMoviesInput, languagesUncheckedCreateWithoutMoviesInput>
   }
 
-  export type GenreUpsertWithoutMoviesInput = {
-    update: XOR<GenreUpdateWithoutMoviesInput, GenreUncheckedUpdateWithoutMoviesInput>
-    create: XOR<GenreCreateWithoutMoviesInput, GenreUncheckedCreateWithoutMoviesInput>
-    where?: GenreWhereInput
+  export type genresUpsertWithoutMoviesInput = {
+    update: XOR<genresUpdateWithoutMoviesInput, genresUncheckedUpdateWithoutMoviesInput>
+    create: XOR<genresCreateWithoutMoviesInput, genresUncheckedCreateWithoutMoviesInput>
+    where?: genresWhereInput
   }
 
-  export type GenreUpdateToOneWithWhereWithoutMoviesInput = {
-    where?: GenreWhereInput
-    data: XOR<GenreUpdateWithoutMoviesInput, GenreUncheckedUpdateWithoutMoviesInput>
+  export type genresUpdateToOneWithWhereWithoutMoviesInput = {
+    where?: genresWhereInput
+    data: XOR<genresUpdateWithoutMoviesInput, genresUncheckedUpdateWithoutMoviesInput>
   }
 
-  export type GenreUpdateWithoutMoviesInput = {
+  export type genresUpdateWithoutMoviesInput = {
     genre_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type GenreUncheckedUpdateWithoutMoviesInput = {
+  export type genresUncheckedUpdateWithoutMoviesInput = {
     id?: IntFieldUpdateOperationsInput | number
     genre_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type LanguageUpsertWithoutMoviesInput = {
-    update: XOR<LanguageUpdateWithoutMoviesInput, LanguageUncheckedUpdateWithoutMoviesInput>
-    create: XOR<LanguageCreateWithoutMoviesInput, LanguageUncheckedCreateWithoutMoviesInput>
-    where?: LanguageWhereInput
+  export type languagesUpsertWithoutMoviesInput = {
+    update: XOR<languagesUpdateWithoutMoviesInput, languagesUncheckedUpdateWithoutMoviesInput>
+    create: XOR<languagesCreateWithoutMoviesInput, languagesUncheckedCreateWithoutMoviesInput>
+    where?: languagesWhereInput
   }
 
-  export type LanguageUpdateToOneWithWhereWithoutMoviesInput = {
-    where?: LanguageWhereInput
-    data: XOR<LanguageUpdateWithoutMoviesInput, LanguageUncheckedUpdateWithoutMoviesInput>
+  export type languagesUpdateToOneWithWhereWithoutMoviesInput = {
+    where?: languagesWhereInput
+    data: XOR<languagesUpdateWithoutMoviesInput, languagesUncheckedUpdateWithoutMoviesInput>
   }
 
-  export type LanguageUpdateWithoutMoviesInput = {
+  export type languagesUpdateWithoutMoviesInput = {
     language_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type LanguageUncheckedUpdateWithoutMoviesInput = {
+  export type languagesUncheckedUpdateWithoutMoviesInput = {
     id?: IntFieldUpdateOperationsInput | number
     language_name?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type MovieCreateManyGenresInput = {
+  export type moviesCreateManyGenresInput = {
     id?: number
     movie_name?: string | null
     movie_language?: number | null
   }
 
-  export type MovieUpdateWithoutGenresInput = {
+  export type moviesUpdateWithoutGenresInput = {
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
-    languages?: LanguageUpdateOneWithoutMoviesNestedInput
+    languages?: languagesUpdateOneWithoutMoviesNestedInput
   }
 
-  export type MovieUncheckedUpdateWithoutGenresInput = {
+  export type moviesUncheckedUpdateWithoutGenresInput = {
     id?: IntFieldUpdateOperationsInput | number
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
     movie_language?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
-  export type MovieUncheckedUpdateManyWithoutGenresInput = {
+  export type moviesUncheckedUpdateManyWithoutGenresInput = {
     id?: IntFieldUpdateOperationsInput | number
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
     movie_language?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
-  export type MovieCreateManyLanguagesInput = {
+  export type moviesCreateManyLanguagesInput = {
     id?: number
     movie_name?: string | null
     genre_movie?: number | null
   }
 
-  export type MovieUpdateWithoutLanguagesInput = {
+  export type moviesUpdateWithoutLanguagesInput = {
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
-    genres?: GenreUpdateOneWithoutMoviesNestedInput
+    genres?: genresUpdateOneWithoutMoviesNestedInput
   }
 
-  export type MovieUncheckedUpdateWithoutLanguagesInput = {
+  export type moviesUncheckedUpdateWithoutLanguagesInput = {
     id?: IntFieldUpdateOperationsInput | number
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
     genre_movie?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
-  export type MovieUncheckedUpdateManyWithoutLanguagesInput = {
+  export type moviesUncheckedUpdateManyWithoutLanguagesInput = {
     id?: IntFieldUpdateOperationsInput | number
     movie_name?: NullableStringFieldUpdateOperationsInput | string | null
     genre_movie?: NullableIntFieldUpdateOperationsInput | number | null

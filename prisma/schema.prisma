@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
+  binaryTargets = ["native", "debian-opnessl-3.0.x"]
 }
 
 datasource db {
@@ -8,29 +8,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Genre {
+model genres {
   id         Int      @id @default(autoincrement())
   genre_name String?  @db.VarChar(50)
-  movies     Movie[]
-
-  @@map("genres")
+  movies     movies[]
 }
 
-model Language {
+model languages {
   id            Int      @id(map: "langiages_pkey") @default(autoincrement())
   language_name String?  @db.VarChar(50)
-  movies        Movie[]
-
-  @@map("languages")
+  movies        movies[]
 }
 
-model Movie {
+model movies {
   id             Int        @id @default(autoincrement())
   movie_name     String?    @db.VarChar(50)
   movie_language Int?
   genre_movie    Int?
-  genres         Genre?    @relation(fields: [genre_movie], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  languages      Language? @relation(fields: [movie_language], references: [id], onDelete: NoAction, onUpdate: NoAction)
-
-  @@map("movies")
+  genres         genres?    @relation(fields: [genre_movie], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  languages      languages? @relation(fields: [movie_language], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }

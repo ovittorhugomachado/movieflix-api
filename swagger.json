@@ -8,7 +8,9 @@
     "paths": {
         "/movies": {
             "get": {
-                "tags": ["Movie"],
+                "tags": [
+                    "Movie"
+                ],
                 "summary": "obter todos os filmes",
                 "responses": {
                     "200": {
@@ -23,6 +25,110 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        },
+        "/movies/{id}": {
+            "put": {
+                "tags": [
+                    "Movie"
+                ],
+                "summary": "atualizar um filme",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID do filme a ser atualizado",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MovieInput"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Filme atualizado com sucesso"
+                    },
+                    "404": {
+                        "description": "Filme não encontrado"
+                    },
+                    "500": {
+                        "description": "Falha ao atualizar registro do filme"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Movie"
+                ],
+                "summary": "Remover um filme",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID do filme a ser removido",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Filme removido com sucesso"
+                    },
+                    "404": {
+                        "description": "Filme não encontrado"
+                    },
+                    "500": {
+                        "description": "Não foi possível deletar o filme"
+                    }
+                }
+            }
+        },
+        "/movies/{genreName}": {
+            "get": {
+                "tags": [
+                    "Movie"
+                ],
+                "summary": "Filtrar filmes por gênero",
+                "parameters": [
+                    {
+                        "name": "genreName",
+                        "in": "path",
+                        "required": true,
+                        "description": "Nome do gênero",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Movie"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Falha ao filtrar filmes por gênero"
                     }
                 }
             }
@@ -74,6 +180,28 @@
                                 "description": "Nome do gênero"
                             }
                         }
+                    }
+                }
+            },
+            "MovieInput": {
+                "type": "object",
+                "required": [
+                    "movie_name",
+                    "movie_language",
+                    "genre_movie"
+                ],
+                "properties": {
+                    "movie_name": {
+                        "type": "string",
+                        "description": "Nome do filme a ser atualizado"
+                    },
+                    "movie_language": {
+                        "type": "string",
+                        "description": "Nome do filme a ser atualizado"
+                    },
+                    "genre_movie": {
+                        "type": "string",
+                        "description": "Nome do filme a ser atualizado"
                     }
                 }
             }

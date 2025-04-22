@@ -117,17 +117,17 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.GenreScalarFieldEnum = {
+exports.Prisma.GenresScalarFieldEnum = {
   id: 'id',
   genre_name: 'genre_name'
 };
 
-exports.Prisma.LanguageScalarFieldEnum = {
+exports.Prisma.LanguagesScalarFieldEnum = {
   id: 'id',
   language_name: 'language_name'
 };
 
-exports.Prisma.MovieScalarFieldEnum = {
+exports.Prisma.MoviesScalarFieldEnum = {
   id: 'id',
   movie_name: 'movie_name',
   movie_language: 'movie_language',
@@ -151,9 +151,9 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  Genre: 'Genre',
-  Language: 'Language',
-  Movie: 'Movie'
+  genres: 'genres',
+  languages: 'languages',
+  movies: 'movies'
 };
 
 /**
